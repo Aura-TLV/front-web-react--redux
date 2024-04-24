@@ -29,7 +29,9 @@ jobs:
     - run: npm i
     - run: npm run lint
     - run: npm run build
-    - run: cd dist && cp -r assets/ /var/www/html/ && cp index.html /var/www/html/index.html
+    - run: cd dist && cp -r assets/ /var/www/html/ && \ 
+            cp index.html /var/www/html/index.html && \
+            cp robots.txt /var/www/html/robots.txt
     - name: release-please
       uses: google-github-actions/release-please-action@v4
       with:
