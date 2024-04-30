@@ -1,14 +1,12 @@
+import { Button, Space } from 'antd';
 
-import './App.css'
+const App = () => (
+  <div style={{ padding: '0 24px' }}>
+    <h1>Front web</h1>
+    <Space>
+      <Button type="primary">Primary Button</Button>
+    </Space>
+  </div>
+);
 
-function App() {
-
-
-  return (
-    <>
-      <p>Client</p>
-    </>
-  )
-}
-
-export default App
+export default App;
