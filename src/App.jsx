@@ -1,11 +1,12 @@
-import { Button, Space } from 'antd';
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
+import Menu from '../components/Menu';
+import About from "../components/About";
+
 
 const App = () => (
-  <div style={{ padding: '0 24px' }}>
-    <h1>Front web</h1>
-    <Space>
-      <Button type="primary">Primary Button</Button>
-    </Space>
+  <div className="container-fluid">
+    <Menu />
+    <About />
   </div>
 );
 
