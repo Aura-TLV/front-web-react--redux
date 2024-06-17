@@ -1,0 +1,12 @@
+{
+    "general": {
+        "notFound": "הדף לא נמצא",
+        "goToHomePage": "עבור לדף הבית"
+    },
+    "nav": {
+        "jobs": "משרות",
+        "aboutUs": "עלינו",
+        "howTo": "כיצד זה עובד",
+        "contacts": "איש קשר"
+    }
+}

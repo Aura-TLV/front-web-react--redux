@@ -1,0 +1,12 @@
+{
+    "general": {
+        "notFound": "Page not found",
+        "goToHomePage": "Go to home page"
+    },
+    "nav": {
+        "jobs": "Jobs",
+        "aboutUs": "About us",
+        "howTo": "How it works",
+        "contacts": "Contacts"
+    }
+}

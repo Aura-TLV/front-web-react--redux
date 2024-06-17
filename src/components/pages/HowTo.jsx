@@ -1,8 +1,12 @@
-const About = () => {
+import YoutubeVideo from "../common/YoutubeVideo"
+
+const HowTo = () => {
   return (
     <div>
         <section>
         <h1>Как это работает</h1>
+
+        <YoutubeVideo src={'z1QtRbKq8Tw'} />
 
         <h2>Шаг 1: Регистрация</h2>
         <p>Пройдите простую и быструю регистрацию на нашем сайте. Вам нужно указать свой email, создать пароль и заполнить основные данные профиля.</p>
@@ -38,4 +42,4 @@ const About = () => {
   )
 }
 
-export default About
+export default HowTo
