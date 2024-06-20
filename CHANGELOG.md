@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/avieljobs/front-web/compare/v1.1.0...v1.2.0) (2024-06-20)
+
+
+### Features
+
+* add pages, translation ([483680b](https://github.com/avieljobs/front-web/commit/483680b92eae03d81f9205c92a15170e7f4eff28))
+
 ## [1.1.0](https://github.com/avieljobs/front-web/compare/v1.0.0...v1.1.0) (2024-06-17)
 
 
