@@ -1,12 +1,25 @@
 {
-    "general": {
-        "notFound": "Page not found",
-        "goToHomePage": "Go to home page"
-    },
-    "nav": {
-        "jobs": "Jobs",
-        "aboutUs": "About us",
-        "howTo": "How it works",
-        "contacts": "Contacts"
+  "general": {
+    "notFound": "Page not found",
+    "goToHomePage": "Go to home page"
+  },
+  "nav": {
+    "jobs": "Jobs",
+    "aboutUs": "About us",
+    "howTo": "How it works",
+    "contacts": "Contacts"
+  },
+  "qc": {
+    "line1": "Have questions?",
+    "line2": "Contact us"
+  },
+  "static": {
+    "aboutUs": "AvielJobs specializes in recruitment. We strive to help our clients find the ideal candidates who meet their requirements and expectations. Our team of professionals uses advanced methods and tools to search and evaluate candidates to ensure the best results for your business.\nWe value each client and candidate, offering a personalized approach and high-quality service. By trusting AvielJobs, you get a reliable partner in recruitment.",
+    "howTo": "Step 1: Registration\nComplete a simple and quick registration on our website. You need to provide your email, create a password and fill out basic profile information.\nStep 2: Create and configure your profile\nComplete your profile with information about your education, work experience and professional skills. Add a resume and, if desired, a portfolio with examples of your work. The more detailed your profile is, the greater your chances of successful employment.\nStep 3: Search for vacancies\nUse our convenient search engine to find suitable vacancies. You can filter results by keywords, location, occupancy type, and more to quickly find exactly what you need.\nStep 4: Apply for vacancies\nFound an interesting vacancy? Apply in a few clicks! Just click on the \"Respond\" button and send your resume to the employer. You can also write a cover letter to highlight your strengths and interest a potential employer.\nStep 5: Contact employers\nAfter submitting your application, employers may contact you to clarify details or invite you for an interview. All messages will be sent directly to your email and displayed in your personal account on our website.\nStep 6: Interview and Offers\nPass interviews and receive job offers. Our site also offers useful tips and articles on how to ace your interview and make a good impression on your employer.\nStep 7: Getting Started\nAccept the job offer and begin the next stage of your professional career. We are always ready to help you at every stage of your job search and give useful recommendations for further development.\nWhy us?\nUser-friendly interface: our website is intuitive and easy to use.\nLarge selection of vacancies: we constantly update the database with current offers.\nReliability: we work only with trusted employers.\nUser support: Our team is always ready to help you with any questions.\nStart looking for your dream job today with us!",
+    "contacts": {
+      "whatsapp": "Automated WhatsApp bot for sending your information",
+      "telegram": "Automated Telegram bot for sending your information",
+      "form": "Feedback form"
     }
+  }
 }

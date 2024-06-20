@@ -10,6 +10,7 @@ import Jobs from './components/pages/Jobs';
 import About from './components/pages/About';
 import HowTo from './components/pages/HowTo';
 import Contacts from './components/pages/Contacts';
+import './App.css'
 
 const App = () => {
     return (

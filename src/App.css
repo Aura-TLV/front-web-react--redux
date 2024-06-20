@@ -7,3 +7,35 @@ html, body {
   #root {
     padding: 24px;
   }
+
+
+  .highlight {
+    color: #2D79C4;
+    font-weight: 200;
+    font-size: 21px;
+  }
+
+  .saira {
+    font-family: 'Saira', sans-serif;
+  }
+
+  .questionsContacts {
+    background: #D7EAFD;
+    width: 390px;
+    height: 321px;
+    border-radius: 50px;
+  }
+
+  .questionsContacts-inner {
+    text-align: center;
+    padding: 40px 100px;
+  }
+
+  .contactFormLink, .contactFormLink:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+  .contactFormLink:hover, .contactFormLink:active {
+    text-decoration: underline;
+  }
