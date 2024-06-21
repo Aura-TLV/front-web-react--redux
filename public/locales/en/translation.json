@@ -1,7 +1,8 @@
 {
   "general": {
     "notFound": "Page not found",
-    "goToHomePage": "Go to home page"
+    "goToHomePage": "Go to home page",
+    "iAmCompany": "I am the company presenter"
   },
   "nav": {
     "jobs": "Jobs",
@@ -22,5 +23,60 @@
       "form": "Feedback form"
     }
   },
-  "mainPanel": {}
+  "mainPanel": {
+    "candidate": {
+      "login": "Login",
+      "eMail": "Email",
+      "password": "Password",
+      "passwordLink": "Click to reset password",
+      "name": "Name",
+      "birthDate": "Date of birth",
+      "city": "City of residence",
+      "phone": "Phone",
+      "vacancy": "What job are you looking for?",
+      "status": {
+        "label": "What documents do you have?",
+        "t1": "Izrahut (citizenship)",
+        "t2": "Work visa",
+        "t3": "Tourist visa",
+        "t4": "Blue paper (5A)"
+      },
+      "additionalInfo": "Tell us a little about yourself",
+      "extraInfoLabel": "Specify additional criteria",
+      "workingHours": "Working hours",
+      "wagePerHour": "Salary (per hour)",
+      "driver": "Transportation",
+      "lunch": "Food",
+      "living": "Accommodation",
+      "contractType": {
+        "label": "Type of employment",
+        "asaka": "Asaka",
+        "asama": "Asama"
+      },
+      "cv": "Your resume (.doc, .docx, .pdf)",
+      "cvLink": "Download resume form",
+      "controls": {
+        "checkboxY": "Yes",
+        "checkboxN": "Doesn't matter",
+        "btnSave": "Save changes"
+      }
+    },
+    "employee": {
+      "login": "Login",
+      "eMail": "Email",
+      "password": "Password",
+      "passwordLink": "Click to reset password",
+      "name": "Your Name",
+      "companyName": "Company name",
+      "companyType": "What does the company do",
+      "phone": "Phone",
+      "yourAds": {
+        "label": "Your ads",
+        "btnAdd": "Add"
+      },
+      "controls": {
+        "btnSave": "Save changes"
+      }
+    }
+  }
 }
