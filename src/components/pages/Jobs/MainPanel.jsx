@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FormCandidate from "./MainPanelForms/FormCandidate";
-import FormEmployee from "./MainPanelForms/FormEmployee";
+import FormEmployer from "./MainPanelForms/FormEmployer";
 
 const MainPanel = () => {
 
@@ -9,7 +9,7 @@ const MainPanel = () => {
 
   return (
     <>
-        {isCandidate ? <FormCandidate /> : <FormEmployee />}
+        {isCandidate ? <FormCandidate /> : <FormEmployer />}
     </>
   )
 }

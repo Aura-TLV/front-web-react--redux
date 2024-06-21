@@ -21,5 +21,6 @@
       "telegram": "Automated Telegram bot for sending your information",
       "form": "Feedback form"
     }
-  }
+  },
+  "mainPanel": {}
 }
