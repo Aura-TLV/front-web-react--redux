@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/avieljobs/front-web/compare/v1.2.0...v1.3.0) (2024-06-21)
+
+
+### Features
+
+* main pages ([8f5a533](https://github.com/avieljobs/front-web/commit/8f5a5334047781944336220ff54a7b7537c92384))
+
 ## [1.2.0](https://github.com/avieljobs/front-web/compare/v1.1.0...v1.2.0) (2024-06-20)
 
 
