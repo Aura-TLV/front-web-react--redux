@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/avieljobs/front-web/compare/v1.3.0...v1.4.0) (2024-06-21)
+
+
+### Features
+
+* add forms changer + translations ([cf1d2cf](https://github.com/avieljobs/front-web/commit/cf1d2cf8d931d6bf8ed114dd93ec2a6c51cf0933))
+
 ## [1.3.0](https://github.com/avieljobs/front-web/compare/v1.2.0...v1.3.0) (2024-06-21)
 
 
