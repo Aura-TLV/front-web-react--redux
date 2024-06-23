@@ -8,7 +8,8 @@
     "jobs": "Jobs",
     "aboutUs": "About us",
     "howTo": "How it works",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "login": "My cabinet"
   },
   "qc": {
     "line1": "Have questions?",
@@ -97,6 +98,12 @@
         "checkboxN": "No",
         "btnSave": "Save Changes"
       }
+    },
+    "auth": {
+      "login": "Phone/email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "btnLogin": "Log in"
     }
   }
 }

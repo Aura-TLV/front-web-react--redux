@@ -11,6 +11,7 @@ import About from './components/pages/About';
 import HowTo from './components/pages/HowTo';
 import Contacts from './components/pages/Contacts';
 import './App.css'
+import Login from './components/pages/Login';
 
 const App = () => {
     return (
@@ -31,6 +32,7 @@ const App = () => {
                 <Route path='/about-us' element={<About />} />
                 <Route path='/how-to' element={<HowTo />} />
                 <Route path='/contacts' element={<Contacts />} />
+                <Route path='/login' element={<Login />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </Router>

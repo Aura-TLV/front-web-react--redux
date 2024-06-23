@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import './FormCandidate.css';
 
 const FormCandidate = () => {
 
@@ -23,7 +24,7 @@ const FormCandidate = () => {
                     </div>
                     <div className="col-md-3">
                         <label htmlFor="password">{t('mainPanel.candidate.password')}:</label>
-                        <p><a id="password" href="#">{t('mainPanel.candidate.passwordLink')}</a></p>
+                        <p><a id="password" href="#" className="form-link">{t('mainPanel.candidate.passwordLink')}</a></p>
                     </div>
                 </div>
 
@@ -70,7 +71,7 @@ const FormCandidate = () => {
                 </div>
 
                 <div className="row">
-                {t('mainPanel.candidate.extraInfoLabel')}:<br />
+                    {t('mainPanel.candidate.extraInfoLabel')}:<br />
                     <div className="col-md-4">
                         {t('mainPanel.candidate.workingHours')}:
                         <input name="workingHours" type="checkbox" value={8} />8
@@ -101,8 +102,8 @@ const FormCandidate = () => {
 
                 <div className="row">
                     <div className="col-md-4">
+                        {t('mainPanel.candidate.contractType.label')}:
                         <select name="contractType">
-                            {t('mainPanel.candidate.contractType.label')}:
                             <option name="asaka">{t('mainPanel.candidate.contractType.asaka')}</option>
                             <option name="asama">{t('mainPanel.candidate.contractType.asama')}</option>
                         </select>
@@ -112,14 +113,14 @@ const FormCandidate = () => {
                         <input type="file" id="cv" />
                     </div>
                     <div className="col-md-4">
-                        <a href="https://docs.google.com/document/d/1pHJcD5KlHKN_4TbI2BYCKwwSauzYi8Hi/edit?usp=sharing&ouid=114572637345510374218&rtpof=true&sd=true" target="_blank">{t('mainPanel.candidate.cvLink')}</a>
+                        <a className="form-link" href="https://docs.google.com/document/d/1pHJcD5KlHKN_4TbI2BYCKwwSauzYi8Hi/edit?usp=sharing&ouid=114572637345510374218&rtpof=true&sd=true" target="_blank">{t('mainPanel.candidate.cvLink')}</a>
                     </div>
                 </div>
 
                 <div className="row">
                     <div className="col-md-12">
                         <button type="submit">
-                        {t('mainPanel.candidate.controls.btnSave')}
+                            {t('mainPanel.candidate.controls.btnSave')}
                         </button>
                     </div>
                 </div>

@@ -8,7 +8,8 @@
     "jobs": "משרות",
     "aboutUs": "עלינו",
     "howTo": "כיצד זה עובד",
-    "contacts": "איש קשר"
+    "contacts": "איש קשר",
+    "login": "My cabinet"
   },
   "qc": {
     "line1": "יש שאלות?",
@@ -99,6 +100,12 @@
         "checkboxN": "לא",
         "btnSave": "שמור שינויים"
       }
+    },
+    "auth": {
+      "login": "Phone/email",
+      "password": "Пароль",
+      "rememberMe": "Remember me",
+      "btnLogin": "Log in"
     }
   }
 }

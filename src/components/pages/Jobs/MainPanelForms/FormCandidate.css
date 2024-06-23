@@ -1,0 +1,8 @@
+.form-link, .form-link:visited {
+    color: #32A9D8;
+    text-decoration: none;
+}
+
+.form-link:hover, .form-link:focus {
+    text-decoration: underline;
+}
