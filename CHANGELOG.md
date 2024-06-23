@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/avieljobs/front-web/compare/v1.4.0...v1.5.0) (2024-06-23)
+
+
+### Features
+
+* add login page, improve styles of user forms and nav ([f0e364c](https://github.com/avieljobs/front-web/commit/f0e364ca8bab3a78010bd3f51e5b34406f33ab3a))
+
 ## [1.4.0](https://github.com/avieljobs/front-web/compare/v1.3.0...v1.4.0) (2024-06-21)
 
 
