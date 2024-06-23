@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/avieljobs/front-web/compare/v1.5.0...v1.6.0) (2024-06-23)
+
+
+### Features
+
+* log in page ([41c7ed6](https://github.com/avieljobs/front-web/commit/41c7ed644f2732da41feb92ddcab92bed56addf6))
+
 ## [1.5.0](https://github.com/avieljobs/front-web/compare/v1.4.0...v1.5.0) (2024-06-23)
 
 
