@@ -63,20 +63,40 @@
         "btnSave": "שמור שינויים"
       }
     },
-    "employee": {
+    "company": {
       "login": "כניסה",
-      "eMail": "דוא\"ל",
+      "eMail": "דואר אלקטרוני",
       "password": "סיסמה",
       "passwordLink": "לחץ לאיפוס סיסמה",
       "name": "שמך",
       "companyName": "שם החברה",
-      "companyType": "מה עושה החברה",
+      "companyType": "מה החברה עושה",
       "phone": "טלפון",
+      "job": "תפקיד לחיפוש",
+      "city": "מיקום",
+      "age": "גיל",
+      "experience": "ניסיון",
+      "status": {
+        "label": "מסמכים:",
+        "t1": "אזרחות",
+        "t2": "ויזת עבודה",
+        "t3": "ויזת תייר",
+        "t4": "נייר כחול (5א)"
+      },
+      "language": "דרישות שפה",
+      "driver": "הסעה",
+      "lunch": "ארוחות",
+      "living": "מגורים",
+      "enterCityName": "הזן שם עיר",
       "yourAds": {
         "label": "המודעות שלך",
         "btnAdd": "הוסף"
       },
+      "additionalInfo": "מידע נוסף",
+      "additionalInfoPlaceholder": "מידע נוסף (אופציונלי)",
       "controls": {
+        "checkboxY": "כן",
+        "checkboxN": "לא",
         "btnSave": "שמור שינויים"
       }
     }

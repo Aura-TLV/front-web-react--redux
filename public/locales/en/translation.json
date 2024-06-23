@@ -61,21 +61,41 @@
         "btnSave": "Save changes"
       }
     },
-    "employee": {
+    "company": {
       "login": "Login",
       "eMail": "Email",
       "password": "Password",
       "passwordLink": "Click to reset password",
       "name": "Your Name",
-      "companyName": "Company name",
-      "companyType": "What does the company do",
+      "companyName": "Company Name",
+      "companyType": "What the company does",
       "phone": "Phone",
+      "job": "Job for search",
+      "city": "Location",
+      "age": "Age",
+      "experience": "Experience",
+      "status": {
+        "label": "Documents:",
+        "t1": "Citizenship",
+        "t2": "Work Visa",
+        "t3": "Tourist Visa",
+        "t4": "Blue Paper (5א)"
+      },
+      "language": "Language Requirements",
+      "driver": "Transportation",
+      "lunch": "Meals",
+      "living": "Accommodation",
+      "enterCityName": "Enter city name",
       "yourAds": {
-        "label": "Your ads",
+        "label": "Your Ads",
         "btnAdd": "Add"
       },
+      "additionalInfo": "Additional Information",
+      "additionalInfoPlaceholder": "Additional Information (optional)",
       "controls": {
-        "btnSave": "Save changes"
+        "checkboxY": "Yes",
+        "checkboxN": "No",
+        "btnSave": "Save Changes"
       }
     }
   }
