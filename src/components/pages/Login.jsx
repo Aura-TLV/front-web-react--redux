@@ -25,7 +25,11 @@ const Login = () => {
                     </div>
                     <div className="col-md-12">
                         <button type="submit">{t('mainPanel.auth.btnLogin')}</button>
-
+                    </div>
+                    <div className="col-md-12">
+                    <a href='#' className='reg-link' id="regLink">
+                            {t('mainPanel.auth.regLink')}
+                        </a>
                     </div>
                 </form>
         </div>

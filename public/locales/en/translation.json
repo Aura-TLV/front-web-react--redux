@@ -9,7 +9,7 @@
     "aboutUs": "About us",
     "howTo": "How it works",
     "contacts": "Contacts",
-    "login": "My cabinet"
+    "login": "My profile"
   },
   "qc": {
     "line1": "Have questions?",
@@ -40,7 +40,7 @@
         "t1": "Izrahut (citizenship)",
         "t2": "Work visa",
         "t3": "Tourist visa",
-        "t4": "Blue paper (5A)"
+        "t4": "Blue paper (5א)"
       },
       "additionalInfo": "Tell us a little about yourself",
       "extraInfoLabel": "Specify additional criteria",
@@ -103,7 +103,8 @@
       "login": "Phone/email",
       "password": "Password",
       "rememberMe": "Remember me",
-      "btnLogin": "Log in"
+      "btnLogin": "Log in",
+      "regLink": "No profile yet? Sign up!"
     }
   }
 }

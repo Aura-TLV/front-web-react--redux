@@ -9,7 +9,7 @@
     "aboutUs": "עלינו",
     "howTo": "כיצד זה עובד",
     "contacts": "איש קשר",
-    "login": "My cabinet"
+    "login": "הפרופיל שלי"
   },
   "qc": {
     "line1": "יש שאלות?",
@@ -102,10 +102,11 @@
       }
     },
     "auth": {
-      "login": "Phone/email",
-      "password": "Пароль",
-      "rememberMe": "Remember me",
-      "btnLogin": "Log in"
+      "login": "טלפון/אימייל",
+      "password": "סיסמה",
+      "rememberMe": "זכור אותי",
+      "btnLogin": "התחבר",
+      "regLink": "עדיין אין פרופיל? הירשם!"
     }
   }
 }

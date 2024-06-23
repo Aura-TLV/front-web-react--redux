@@ -1,3 +1,12 @@
 .login-form {
     text-align: center;
 }
+
+.reg-link, .reg-link:visited {
+    color: #32A9D8;
+    text-decoration: none;
+}
+
+.reg-link:hover, .reg-link:focus {
+    text-decoration: underline;
+}
