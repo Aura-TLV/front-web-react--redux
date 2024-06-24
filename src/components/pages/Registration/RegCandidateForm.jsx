@@ -119,7 +119,7 @@ const RegCandidateForm = () => {
                     id="city" />
             </div>
             <div className="col-md-12">
-                <label htmlFor="cv">{t('mainPanel.reg.candidate.cv')}</label>
+                <label htmlFor="cv">{t('mainPanel.candidate.cv')}</label>
                 <input type="file" name='cv' onChange={(e) => onChangeHandler('cv', e.target.files[0])} id="cv" />
             </div>
             <div className="col-md-12">
