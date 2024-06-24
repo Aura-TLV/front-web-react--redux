@@ -120,7 +120,7 @@ const RegCandidateForm = () => {
             </div>
             <div className="col-md-12">
                 <label htmlFor="cv">{t('mainPanel.candidate.cv')}</label>
-                <input type="file" name='cv' onChange={(e) => onChangeHandler('cv', e.target.files[0])} id="cv" />
+                <input type="file" accept='application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf' name='cv' onChange={(e) => onChangeHandler('cv', e.target.files[0])} id="cv" />
             </div>
             <div className="col-md-12">
                 <button type="submit">{t('mainPanel.reg.btnSubmit')}</button>
