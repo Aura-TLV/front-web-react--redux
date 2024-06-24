@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.7.0](https://github.com/avieljobs/front-web/compare/v1.6.0...v1.7.0) (2024-06-24)
+
+
+### Features
+
+* add reg page ([b2476b5](https://github.com/avieljobs/front-web/commit/b2476b571e1b05dc9d764e99e8ff8a292c563e30))
+
+
+### Bug Fixes
+
+* set font for body ([0136d22](https://github.com/avieljobs/front-web/commit/0136d223425ea8b7d3423a59382af7785717d9ae))
+
 ## [1.6.0](https://github.com/avieljobs/front-web/compare/v1.5.0...v1.6.0) (2024-06-23)
 
 
