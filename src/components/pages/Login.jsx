@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import './Login.css';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -27,9 +28,9 @@ const Login = () => {
                         <button type="submit">{t('mainPanel.auth.btnLogin')}</button>
                     </div>
                     <div className="col-md-12">
-                    <a href='#' className='reg-link' id="regLink">
+                    <Link to='/reg' className='reg-link' id="regLink">
                             {t('mainPanel.auth.regLink')}
-                        </a>
+                        </Link>
                     </div>
                 </form>
         </div>

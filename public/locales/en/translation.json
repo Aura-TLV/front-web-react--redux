@@ -9,7 +9,8 @@
     "aboutUs": "About us",
     "howTo": "How it works",
     "contacts": "Contacts",
-    "login": "My profile"
+    "login": "My profile",
+    "reg": "Register on our website"
   },
   "qc": {
     "line1": "Have questions?",
@@ -104,7 +105,39 @@
       "password": "Password",
       "rememberMe": "Remember me",
       "btnLogin": "Log in",
-      "regLink": "No profile yet? Sign up!"
+      "regLink": "No profile yet? Sign up!",
+      "loginLink": "Already registered? Sign in!"
+    },
+    "reg": {
+      "btnSubmit": "Okay, I am ready to continue!",
+      "finalMessage": "Your request has been sent and password is on your email!",
+      "candidate": {
+        "name": "Tell your name",
+        "age": "How old are you?",
+        "eMail": "Tell your email",
+        "phone": "Tell your Israeli phone number",
+        "status": {
+          "label": "Which status do you have in Israel?",
+          "t1": "Teudat zeut (citizenship)",
+          "t2": "Working visa",
+          "t3": "Tourist visa (B2)",
+          "t4": "Blue paper (5א)"
+        },
+        "vacancy": "Vacancy that you want",
+        "city": "Which city it should be located"
+      },
+      "company": {
+        "name": "What is your company name?",
+        "profile": "What do you do, which profile?",
+        "positions": "Which position(s) are opened?",
+        "workersQuantity": "How many people do you need?",
+        "eMail": "Tell your contact email",
+        "workingHours": {
+          "start": "Start working hours",
+          "finish": "Finish working hours"
+        },
+        "city": "Your company's location"
+      }
     }
   }
 }

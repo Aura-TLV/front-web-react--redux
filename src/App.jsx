@@ -12,6 +12,7 @@ import HowTo from './components/pages/HowTo';
 import Contacts from './components/pages/Contacts';
 import './App.css'
 import Login from './components/pages/Login';
+import Registration from './components/pages/Registration';
 
 const App = () => {
     return (
@@ -33,6 +34,7 @@ const App = () => {
                 <Route path='/how-to' element={<HowTo />} />
                 <Route path='/contacts' element={<Contacts />} />
                 <Route path='/login' element={<Login />} />
+                <Route path='/reg' element={<Registration />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </Router>
