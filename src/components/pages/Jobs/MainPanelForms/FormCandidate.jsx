@@ -110,7 +110,7 @@ const FormCandidate = () => {
                     </div>
                     <div className="col-md-4">
                         <label htmlFor="cv">{t('mainPanel.candidate.cv')}:</label>
-                        <input type="file" id="cv" />
+                        <input type="file" accept='application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf' id="cv" />
                     </div>
                     <div className="col-md-4">
                         <a className="form-link" href="https://docs.google.com/document/d/1pHJcD5KlHKN_4TbI2BYCKwwSauzYi8Hi/edit?usp=sharing&ouid=114572637345510374218&rtpof=true&sd=true" target="_blank">{t('mainPanel.candidate.cvLink')}</a>
