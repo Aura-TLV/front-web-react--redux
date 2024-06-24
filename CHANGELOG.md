@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.0](https://github.com/avieljobs/front-web/compare/v1.7.0...v1.8.0) (2024-06-24)
+
+
+### Features
+
+* add fetch for reg company form ([f2431ce](https://github.com/avieljobs/front-web/commit/f2431cedbaeb242ca63013d3752978b28f7dd472))
+* add fetcher, reg candidate (todo file) ([aff0d90](https://github.com/avieljobs/front-web/commit/aff0d90366881050f6931632c7df3d6da892e2f0))
+
 ## [1.7.0](https://github.com/avieljobs/front-web/compare/v1.6.0...v1.7.0) (2024-06-24)
 
 
