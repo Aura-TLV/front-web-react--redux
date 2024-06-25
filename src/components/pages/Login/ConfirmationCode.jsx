@@ -3,8 +3,7 @@ const ConfirmationCode = () => {
 
         <form>
             <div className="col-md-12">
-                <input id="code" maxLength={6} />
-                <button type="submit">Enter code</button>
+                <p>Please look at your email and confirm the code!</p>
             </div>
         </form>
 

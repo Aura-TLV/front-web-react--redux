@@ -17,6 +17,10 @@ const doAPIRequest = async (route, method = 'get', payload = null, isFormData = 
             data: payload
         });
 
+        if (response.status === 404) {
+            throw new Error('User not found');
+        }
+
         return response.data;
     } catch (error) {
         console.log(error);
@@ -40,3 +44,7 @@ export const sendEmail = async (titleString, logInString, password, eMail) => {
         attachments: []
     });
 };
+
+export const sendVerificationEmail = async (eMail) => {
+    return doAPIRequest('/auth/email', 'post', { eMail });
+}

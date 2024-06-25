@@ -1,27 +1,52 @@
 import { useTranslation } from 'react-i18next';
 import './Login.css';
 import { Link } from 'react-router-dom';
+import { sendVerificationEmail } from '../../utils/fetcher';
+import { useState } from 'react';
 
 const Login = () => {
 
     const { t } = useTranslation();
+
+    const [login, setLogin] = useState('');
+    const [password, setPassword] = useState('');
+    const [rememberMe, setRememberMe] = useState(false);
+
+
+
+    const submitHandler = async (e) => {
+        e.preventDefault();
+        await sendVerificationEmail(login);
+        console.log(password, rememberMe)
+        //location.href = '/confirm';
+        alert('Please confirm email')
+    }
 
     return (
         <div className='row login-form'>
             <div className="col-md-12">
                 <h1>{t('nav.login')}</h1>
             </div>
-                <form>
+                <form onSubmit={e => submitHandler(e)}>
                     <div className="col-md-12">
-                        <input type="text" name="login" placeholder={t('mainPanel.auth.login')} />
+                        <input type="text" name="login"
+                        onMouseLeave={(e) => setLogin(e.target.value)}
+                        onKeyDown={(e) => setLogin(e.target.value)}
+                        onChange={(e) => setLogin(e.target.value)} 
+                    placeholder={t('mainPanel.auth.login')} />
 
                     </div>
                     <div className="col-md-12">
-                        <input type="text" name="password" placeholder={t('mainPanel.auth.password')} />
+                        <input type="password" name="password" 
+                        onKeyDown={(e) => setPassword(e.target.value)}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder={t('mainPanel.auth.password')} />
 
                     </div>
                     <div className="col-md-12">
-                        <input type="checkbox" name="rememberMe" /> {t('mainPanel.auth.rememberMe')}
+                        <input type="checkbox"
+                        onChange={(e) => setRememberMe(e.target.checked)}
+                        name="rememberMe" /> {t('mainPanel.auth.rememberMe')}
 
                     </div>
                     <div className="col-md-12">
