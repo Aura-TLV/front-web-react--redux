@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/avieljobs/front-web/compare/v1.8.0...v1.9.0) (2024-06-25)
+
+
+### Features
+
+* add login handler ([bd70f23](https://github.com/avieljobs/front-web/commit/bd70f23363a2f2b4e4eb2df23aed3437f5f96a2e))
+
 ## [1.8.0](https://github.com/avieljobs/front-web/compare/v1.7.0...v1.8.0) (2024-06-24)
 
 
