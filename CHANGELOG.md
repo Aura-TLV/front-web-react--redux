@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/avieljobs/front-web/compare/v1.9.1...v1.10.0) (2024-06-26)
+
+
+### Features
+
+* add adverts list page and set is as main page ([60857fc](https://github.com/avieljobs/front-web/commit/60857fc0f8b6fa3d74bafddec7ecf2061a81db22))
+
 ## [1.9.1](https://github.com/avieljobs/front-web/compare/v1.9.0...v1.9.1) (2024-06-26)
 
 
