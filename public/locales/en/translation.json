@@ -138,6 +138,40 @@
         },
         "city": "Your company's location"
       }
+    },
+    "list": {
+      "search": {
+        "city": "City",
+        "workingHours": "Working hours",
+        "wagePerHour": "Wage (per hour)",
+        "driver": "Driver to work",
+        "lunch": "Lunch",
+        "living": "Living",
+        "yes": "Yes",
+        "no": "Optional",
+        "btnSearch": "Search"
+      },
+      "ads": {
+        "wagePerHour": "Wage (per hour)",
+        "workingHours": "Working hours",
+        "driver": "Driver to work",
+        "shifts": {
+          "label": "Shifts",
+          "morning": "morning",
+          "night": "night"
+        },
+        "break": "Break",
+        "lunch": "Lunch",
+        "living": "Living",
+        "bonus": "Bonuses",
+        "additionalInfo": "Extra info",
+        "images": "Images",
+        "yes": "yes",
+        "no": "no",
+        "less": "Show less ↑",
+        "more": "Show more ↓",
+        "btnSend": "Apply to this job"
+      }
     }
   }
 }

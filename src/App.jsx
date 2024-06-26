@@ -14,6 +14,7 @@ import './App.css'
 import Login from './components/pages/Login';
 import Registration from './components/pages/Registration';
 import ConfirmationCode from './components/pages/Login/ConfirmationCode';
+import Adverts from './components/pages/Adverts';
 
 const App = () => {
     return (
@@ -29,7 +30,6 @@ const App = () => {
             </header>
 
             <Routes>
-                <Route path='/' element={<Jobs />} />
                 <Route path='/jobs' element={<Jobs />} />
                 <Route path='/about-us' element={<About />} />
                 <Route path='/how-to' element={<HowTo />} />
@@ -37,6 +37,7 @@ const App = () => {
                 <Route path='/login' element={<Login />} />
                 <Route path='/reg' element={<Registration />} />
                 <Route path='/confirm' element={<ConfirmationCode />} />
+                <Route path='/' element={<Adverts />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </Router>

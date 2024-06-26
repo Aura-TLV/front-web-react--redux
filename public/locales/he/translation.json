@@ -141,6 +141,40 @@
         },
         "city": "מיקום החברה שלך"
       }
+    },
+    "list": {
+      "search": {
+        "city": "עיר",
+        "workingHours": "שעות עבודה",
+        "wagePerHour": "שכר (לשעה)",
+        "driver": "נהג לעבודה",
+        "lunch": "ארוחת צהריים",
+        "living": "מגורים",
+        "yes": "כן",
+        "no": "אופציונלי",
+        "btnSearch": "חפש"
+      },
+      "ads": {
+        "wagePerHour": "שכר (לשעה)",
+        "workingHours": "שעות עבודה",
+        "driver": "נהג לעבודה",
+        "shifts": {
+          "label": "משמרות",
+          "morning": "בוקר",
+          "night": "לילה"
+        },
+        "break": "הפסקה",
+        "lunch": "ארוחת צהריים",
+        "living": "מגורים",
+        "bonus": "בונוסים",
+        "additionalInfo": "מידע נוסף",
+        "images": "תמונות",
+        "yes": "כן",
+        "no": "לא",
+        "less": "הצג פחות ↑",
+        "more": "הצג עוד ↓",
+        "btnSend": "הגש מועמדות למשרה זו"
+      }
     }
   }
 }

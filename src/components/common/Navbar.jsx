@@ -22,7 +22,7 @@ const Navbar = () => {
 
                 <ul className="custom-navbar navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <NavLink className="nav-link" aria-current="page" to="/">
+                        <NavLink className="nav-link" aria-current="page" to="/jobs">
                             {t('nav.jobs')}
                         </NavLink>
                     </li>
