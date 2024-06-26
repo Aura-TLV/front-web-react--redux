@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/avieljobs/front-web/compare/v1.9.0...v1.9.1) (2024-06-26)
+
+
+### Bug Fixes
+
+* youtube widget ([8480a4a](https://github.com/avieljobs/front-web/commit/8480a4afcec46af976f1b8618aeffc23e4375115))
+
 ## [1.9.0](https://github.com/avieljobs/front-web/compare/v1.8.0...v1.9.0) (2024-06-25)
 
 
