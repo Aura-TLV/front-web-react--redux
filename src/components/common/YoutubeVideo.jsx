@@ -1,17 +1,10 @@
+import ReactPlayer from 'react-player/youtube';
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-const YoutubeVideo = ({ code, ratio = '16x9' }) => {
+const YoutubeVideo = ({ code = '' }) => {
     return (
-        <div className={`ratio ratio-${ratio}`}>
-            <LiteYouTubeEmbed
-                id={`${code}`}
-                title={`yt-${code}`}
-                poster="maxresdefault"
-            />
-        </div>
+        <ReactPlayer style={{ margin: '0 auto' }} url={`https://www.youtube.com/watch?v=${code}`} />
     )
 }
 
-export default YoutubeVideo
+export default YoutubeVideo;

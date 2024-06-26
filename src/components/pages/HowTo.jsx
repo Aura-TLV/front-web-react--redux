@@ -12,7 +12,7 @@ const HowTo = () => {
       <section>
         <h1>{t('nav.howTo')}</h1>
 
-        <YoutubeVideo src={'z1QtRbKq8Tw'} />
+        <YoutubeVideo code={'LXb3EKWsInQ'} />
         <hr />
         {t('static.howTo')}
 
