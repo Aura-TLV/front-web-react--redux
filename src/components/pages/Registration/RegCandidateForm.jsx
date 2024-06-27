@@ -42,6 +42,7 @@ const RegCandidateForm = () => {
     }
 
     const cvSelectedHandler = (file) => {
+        // TODO: fix buffer for nodemail
         setCV(file);
         
         fileReader = new FileReader();
