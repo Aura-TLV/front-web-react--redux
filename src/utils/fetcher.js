@@ -80,7 +80,7 @@ export const sendCVToEmail = async (options) => {
       ],
     };
 
-   return doAPIRequest('', 'post', payload);
+   return doAPIRequest('/users/to-email', 'post', payload);
 
 
 };
