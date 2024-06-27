@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/avieljobs/front-web/compare/v1.10.0...v1.10.1) (2024-06-27)
+
+
+### Bug Fixes
+
+* dynamic howto text depending on lang ([e4ec0e5](https://github.com/avieljobs/front-web/commit/e4ec0e55f220e32524ee03dae3f91de07f2a3d5d))
+
 ## [1.10.0](https://github.com/avieljobs/front-web/compare/v1.9.1...v1.10.0) (2024-06-26)
 
 
