@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { regNewUser, sendEmail } from '../../../utils/fetcher';
+import { regNewUser, sendEmail, sendToBitrix } from '../../../utils/fetcher';
 import passwordGenerator from '../../../utils/passwordGenerator';
+import getUserStatusForRecruiter from '../../../utils/getUserStatusForRecruiter';
 import { useTranslation } from "react-i18next";
+import UserTypesEnum from '../../../enums/UserTypes.enum';
 
 const RegCandidateForm = () => {
 
@@ -41,6 +43,21 @@ const RegCandidateForm = () => {
 
         await sendEmail(getEmailTitle(language), getEmailLoginString(language), password, formData.eMail);
 
+        await sendToBitrix({
+            leadTitle: `Заявка на кандидата ${formData.name || ''}`,
+            userFirstName: formData.name,
+            userLastName: '',
+            phone: formData.phone,
+            userWhatsappPhone: formData.phone, // to match validation
+            userWage: 33,
+            userType: UserTypesEnum.Employee,
+            leadInfo: `
+            Возраст: ${formData.age ? parseInt(formData.age) : '(не указан)'}\n
+            Город: ${formData.city || '(не указан)'}\n
+            Телефон: ${formData.phone || '(не указан)'}\n
+            Что ищет: ${formData.vacancy || '(не указано)'}\n
+            Статус в стране: ${getUserStatusForRecruiter(formData.status)}`
+        });
 
         await regNewUser({
             name: { ru: formData.name, en: formData.name, he: formData.name },
@@ -53,6 +70,7 @@ const RegCandidateForm = () => {
             cv: formData.cv
             // TODO: upload file
         });
+
 
         alert(finalMsg);
         console.log('reg candidate');

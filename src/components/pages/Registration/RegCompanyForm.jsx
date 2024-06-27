@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { regNewCompany, sendEmail } from '../../../utils/fetcher';
+import { regNewCompany, sendEmail, sendToBitrix } from '../../../utils/fetcher';
 import passwordGenerator from '../../../utils/passwordGenerator';
 import { useTranslation } from "react-i18next";
+import UserTypes from '../../../enums/UserTypes.enum';
 
 const RegCompanyForm = () => {
 
@@ -42,9 +43,29 @@ const RegCompanyForm = () => {
 
         await sendEmail(getEmailTitle(language), getEmailLoginString(language), password, formData.eMail);
 
+        await sendToBitrix({
+            leadTitle: `Заявка на рекрутера, компания ${formData.name}`,
+            userFirstName: '',
+            userLastName: '',
+            phone: formData.phone,
+            userWhatsappPhone: formData.phone, // to match validation
+            userWage: 33,
+            userType: UserTypes.Recruiter,
+            leadInfo: `О компании - ${
+            formData.profile || "(нет информации)"
+            }\nКол-во человек - ${
+            formData.workersQuantity || "(нет информации)"
+            }\nТелефонный номер - ${
+                formData.phone || "(не указан)"
+            }\nEmail - ${
+                formData.eMail || '(нет)'
+            }\nЧасы работы - ${
+                `${formData.workStart} - ${formData.workFinish}`
+            }\nЛокация - ${formData.city || '(нет)'}`,
+        });
 
         await regNewCompany({
-            name: formData.name,
+            name: { ru: formData.name, en: formData.name, he: formData.name },
             profile: formData.profile,
             password,
             jobs: formData.jobs,
