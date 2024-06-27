@@ -50,7 +50,7 @@ const RegCandidateForm = () => {
     };
 
     const cvParsedHandler = () => {
-        const fileContents = Buffer.from(fileReader.result);
+        const fileContents = Buffer.from(fileReader.result, 'base64');
         cvContents = fileContents;
     }
 
