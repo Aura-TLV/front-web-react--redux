@@ -3,12 +3,12 @@ import axios from "axios";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const FRONTEND_MAIN_URL = document.location.origin;
 
-const doAPIRequest = async (route, method = 'get', payload = null, isFormData = false) => {
+const doAPIRequest = async (route, method = 'get', payload = null, cType = 'application/json') => {
     try {
         const url = BACKEND_URL + route;
-        const headers = isFormData ? null : {
-            'Content-Type': 'application/json'
-        };
+        const headers = cType ? {
+            'Content-Type': cType
+        } : null;
 
         const response = await axios.request({
             method,
@@ -28,8 +28,13 @@ const doAPIRequest = async (route, method = 'get', payload = null, isFormData = 
     }
 };
 
+export const getHTML = async (lang) => {
+    return doAPIRequest(`/adverts/how-to/${lang}`, 'get', null, 'text/html');
+}
+
 export const regNewUser = async (payload) => {
-    return doAPIRequest('/auth/register', 'post', payload, true);
+    // no contenttype header
+    return doAPIRequest('/auth/register', 'post', payload, null);
 };
 
 export const regNewCompany = async (payload) => {
