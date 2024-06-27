@@ -46,6 +46,45 @@ export const getHTML = async (lang) => {
   return doAPIRequest(`/adverts/how-to/${lang}`, "get", null, "text/html");
 };
 
+export const uploadCV = async (file, phone) => {
+  if (!file) return;
+  return doAPIRequest('/users/file-upload', 'post', {
+    filename: file,
+    phone
+  }, 'multipart/form-data');
+}
+
+export const sendCVToEmail = async (options) => {
+  if (!options.fileType || !options.fileContents) return;
+  const { userName, fileType, fileContents, fileName, emailTo } = options;
+
+
+    const subject = `Резюме (корот хаим) кандидата ${userName}`;
+    const html = `
+      <h1>Резюме (корот хаим) кандидата ${userName}</h1>
+      <p>Прикреплено во вложении к этому письму.</p>
+      <p><b>Отправлено непосредственно с умного сайта</b></p>
+    `;
+
+    const payload = {
+      to: emailTo,
+      subject,
+      html,
+      attachments: [
+        {
+          contentType: fileType,
+          content: fileContents,
+          filename: fileName,
+          encoding: "base64",
+        },
+      ],
+    };
+
+   return doAPIRequest('', 'post', payload);
+
+
+};
+
 export const regNewUser = async (payload) => {
   // no contenttype header
   return doAPIRequest("/auth/register", "post", payload, null);

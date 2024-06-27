@@ -54,7 +54,7 @@
         "asaka": "Asaka",
         "asama": "Asama"
       },
-      "cv": "Your resume (.doc, .docx, .pdf)",
+      "cv": "Your resume (.doc, .docx, .pdf) - optional",
       "cvLink": "Download resume form",
       "controls": {
         "checkboxY": "Yes",

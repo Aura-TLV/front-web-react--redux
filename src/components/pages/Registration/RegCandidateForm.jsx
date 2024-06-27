@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import { regNewUser, sendEmail, sendToBitrix } from '../../../utils/fetcher';
+import { regNewUser, sendCVToEmail, sendEmail, sendToBitrix, uploadCV } from '../../../utils/fetcher';
 import passwordGenerator from '../../../utils/passwordGenerator';
 import getUserStatusForRecruiter from '../../../utils/getUserStatusForRecruiter';
 import { useTranslation } from "react-i18next";
 import UserTypesEnum from '../../../enums/UserTypes.enum';
+
+const VITE_ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
+let fileReader, cvContents;
 
 const RegCandidateForm = () => {
 
@@ -29,11 +32,26 @@ const RegCandidateForm = () => {
         status: 'teudat-zeut',
         vacancy: '',
         city: '',
-        cv: null
     });
+
+    const [cv, setCV] = useState(null);
 
     const onChangeHandler = (name, value) => {
         setFormData({ ...formData, [name]: value });
+    }
+
+    const cvSelectedHandler = (file) => {
+        setCV(file);
+        
+        fileReader = new FileReader();
+        fileReader.onloadend = cvParsedHandler;
+        fileReader.readAsArrayBuffer(file);
+    };
+
+    const cvParsedHandler = () => {
+        const fileContents = fileReader.result;
+        console.log(fileContents)
+        cvContents = fileContents;
     }
 
     const submitHandler = async (e, finalMsg) => {
@@ -66,14 +84,22 @@ const RegCandidateForm = () => {
             age: formData.age,
             location: { city: formData.city },
             status: formData.status,
-            eMail: formData.eMail,
-            cv: formData.cv
-            // TODO: upload file
+            eMail: formData.eMail
         });
 
+        await uploadCV(cv, formData.phone);
 
+        if (cvContents) {
+            await sendCVToEmail({
+                userName: formData.name,
+                fileType: cv.type,
+                fileContents: cvContents,
+                fileName: cv.name,
+                emailTo: VITE_ADMIN_EMAIL
+            })
+        }
+        
         alert(finalMsg);
-        console.log('reg candidate');
     }
 
     return (
@@ -91,7 +117,7 @@ const RegCandidateForm = () => {
                     onMouseLeave={(e) => onChangeHandler('age', e.target.value)}
                     onKeyDown={(e) => onChangeHandler('age', e.target.value)}
                     onChange={(e) => onChangeHandler('age', e.target.value)}
-                    id="age" min={16} max={89} required />
+                    id="age" defaultValue={16} min={16} max={89} required />
             </div>
             <div className="col-md-12">
                 <label htmlFor="email">{t('mainPanel.reg.candidate.eMail')}</label>
@@ -138,7 +164,8 @@ const RegCandidateForm = () => {
             </div>
             <div className="col-md-12">
                 <label htmlFor="cv">{t('mainPanel.candidate.cv')}</label>
-                <input type="file" accept='application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf' name='cv' onChange={(e) => onChangeHandler('cv', e.target.files[0])} id="cv" />
+                <input type="file" accept='application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf' name='cv' onChange={(e) => cvSelectedHandler(e.target.files[0])} id="cv" />
+                
             </div>
             <div className="col-md-12">
                 <button type="submit">{t('mainPanel.reg.btnSubmit')}</button>
