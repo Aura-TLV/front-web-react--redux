@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/avieljobs/front-web/compare/v1.10.2...v1.11.0) (2024-06-27)
+
+
+### Features
+
+* add bitrix integration on reg ([16d3060](https://github.com/avieljobs/front-web/commit/16d3060a98f78f21c77bbb290f3ebb0553d2efe4))
+
 ## [1.10.2](https://github.com/avieljobs/front-web/compare/v1.10.1...v1.10.2) (2024-06-27)
 
 
