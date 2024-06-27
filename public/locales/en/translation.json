@@ -104,6 +104,7 @@
       "password": "Password",
       "rememberMe": "Remember me",
       "btnLogin": "Log in",
+      "alert": "An email has been sent to you to confirm your login",
       "regLink": "No profile yet? Sign up!",
       "loginLink": "Already registered? Sign in!"
     },

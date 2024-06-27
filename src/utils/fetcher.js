@@ -90,6 +90,22 @@ export const regNewUser = async (payload) => {
   return doAPIRequest("/auth/register", "post", payload, null);
 };
 
+export const authLogin = async (login, password, rememberMe) => {
+  const response = await doAPIRequest("/auth/login", "post", { email: login, password });
+  
+  if (!response) {
+    alert('User not found');
+  } else {
+    const token = response.token;
+    if (rememberMe) {
+      return localStorage.setItem('avielsmart-jwt', token);
+    }
+  }
+  
+  
+  return localStorage.clear();
+}
+
 export const regNewCompany = async (payload) => {
   return doAPIRequest("/auth/register-company", "post", payload);
 };

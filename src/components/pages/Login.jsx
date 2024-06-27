@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import './Login.css';
 import { Link } from 'react-router-dom';
-import { sendVerificationEmail } from '../../utils/fetcher';
+import { sendVerificationEmail, authLogin } from '../../utils/fetcher';
 import { useState } from 'react';
 
 const Login = () => {
@@ -14,12 +14,12 @@ const Login = () => {
 
 
 
-    const submitHandler = async (e) => {
+    const submitHandler = async (e, alertMsg) => {
         e.preventDefault();
         await sendVerificationEmail(login);
-        console.log(password, rememberMe)
-        //location.href = '/confirm';
-        alert('Please confirm email')
+        await authLogin(login, password, rememberMe);
+
+        alert(alertMsg);
     }
 
     return (
@@ -27,7 +27,7 @@ const Login = () => {
             <div className="col-md-12">
                 <h1>{t('nav.login')}</h1>
             </div>
-                <form onSubmit={e => submitHandler(e)}>
+                <form onSubmit={e => submitHandler(e, t('mainPanel.auth.alert'))}>
                     <div className="col-md-12">
                         <input type="text" name="login"
                         onMouseLeave={(e) => setLogin(e.target.value)}
