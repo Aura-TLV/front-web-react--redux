@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/avieljobs/front-web/compare/v1.11.0...v1.12.0) (2024-06-27)
+
+
+### Features
+
+* integrate sending candidate's cv by email ([aff5761](https://github.com/avieljobs/front-web/commit/aff57611156b1a9f458004de3376b8d23a546504))
+
 ## [1.11.0](https://github.com/avieljobs/front-web/compare/v1.10.2...v1.11.0) (2024-06-27)
 
 
