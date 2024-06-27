@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Buffer } from 'buffer';
 import { regNewUser, sendCVToEmail, sendEmail, sendToBitrix, uploadCV } from '../../../utils/fetcher';
 import passwordGenerator from '../../../utils/passwordGenerator';
 import getUserStatusForRecruiter from '../../../utils/getUserStatusForRecruiter';
@@ -49,8 +50,7 @@ const RegCandidateForm = () => {
     };
 
     const cvParsedHandler = () => {
-        const fileContents = fileReader.result;
-        console.log(fileContents)
+        const fileContents = Buffer.from(fileReader.result);
         cvContents = fileContents;
     }
 
