@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.2](https://github.com/avieljobs/front-web/compare/v1.10.1...v1.10.2) (2024-06-27)
+
+
+### Bug Fixes
+
+* dynamic youtube urls for each languages (mock data for now) ([1f05895](https://github.com/avieljobs/front-web/commit/1f058955038415d74f0aedc5b77060b8dde7155d))
+
 ## [1.10.1](https://github.com/avieljobs/front-web/compare/v1.10.0...v1.10.1) (2024-06-27)
 
 
