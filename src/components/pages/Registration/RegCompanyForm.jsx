@@ -112,7 +112,7 @@ const RegCompanyForm = () => {
                     onMouseLeave={(e) => onChangeHandler('workersQuantity', e.target.value)}
                     onKeyDown={(e) => onChangeHandler('workersQuantity', e.target.value)}
                     onChange={(e) => onChangeHandler('workersQuantity', e.target.value)} 
-                id="workersQuantity" min={1} max={999} required />
+                id="workersQuantity" defaultValue={1} min={1} max={999} required />
             </div>
             <div className="col-md-12">
                 <label htmlFor="phone">{t('mainPanel.reg.company.phone')}</label>
