@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.13.0](https://github.com/avieljobs/front-web/compare/v1.12.0...v1.13.0) (2024-06-28)
+
+
+### Features
+
+* dynamic about page ([ea11743](https://github.com/avieljobs/front-web/commit/ea117433d7f29461a6b03eadfaf66a365b35da3c))
+* dynamic jobs ([7c57674](https://github.com/avieljobs/front-web/commit/7c576745455380eee252763880ed2494907d9cf8))
+* log in (todo test) ([4d0afb8](https://github.com/avieljobs/front-web/commit/4d0afb8737b63779c1193385f5bdd92328cca29e))
+
 ## [1.12.0](https://github.com/avieljobs/front-web/compare/v1.11.0...v1.12.0) (2024-06-27)
 
 
