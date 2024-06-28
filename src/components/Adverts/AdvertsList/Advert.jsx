@@ -59,7 +59,7 @@ const Advert = ({ data }) => {
                     <b>{t('mainPanel.list.ads.additionalInfo')}:</b> {additionalInfo}
                 </div>
                 <div className="col-md-12">
-                    <a href="#">{t('mainPanel.list.ads.images')}</a>
+                    <a href="https://motor.ru/thumb/908x0/filters:quality(75):no_upscale()/imgs/2022/08/23/11/5553518/20b027491f7209ca6f58a3ccc4983183b270ca4a.jpg" target='_blank'>{t('mainPanel.list.ads.images')}</a>
                 </div>
             </div>
 

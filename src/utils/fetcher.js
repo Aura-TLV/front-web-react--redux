@@ -122,3 +122,7 @@ export const sendEmail = async (titleString, logInString, password, eMail) => {
 export const sendVerificationEmail = async (eMail) => {
   return doAPIRequest("/auth/email", "post", { eMail });
 };
+
+export const getJobs = () => {
+  return doAPIRequest("/jobs");
+}

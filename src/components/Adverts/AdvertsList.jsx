@@ -1,12 +1,38 @@
+import { useEffect, useState } from "react";
 import Advert from "./AdvertsList/Advert"
-import mockData from "./mockData";
+import { getJobs } from "../../utils/fetcher";
 
 const AdvertsList = () => {
+
+  const [jobAdverts, setJobAdverts] = useState(null);
+
+  useEffect(() => {
+    getJobs().then((response) => setJobAdverts(response.jobs))
+  }, []);
+
   return (
     <>
-        {mockData.map((mockDataItem, index) => {
-            return <Advert key={index} data={mockDataItem} />
-        })}
+      {jobAdverts && jobAdverts.map((dataItem, index) => {
+
+        const dataItemFormatted = {
+          number: dataItem._id,
+          name: dataItem.title.he,
+          city: 'Hadera',
+          wagePerHour: dataItem.wagePerHour,
+          workingHoursStart: dataItem.workingHours[0].start,
+          workingHoursEnd: dataItem.workingHours[0].finish,
+          driver: dataItem.driverToWork,
+          morningShift: '8:00-12:00',
+          nightShift: '20:00-0:00',
+          workBreak: '1 h',
+          lunch: dataItem.lunch,
+          living: true,
+          bonuses: dataItem.bonuses.length > 0,
+          additionalInfo: dataItem.additionalInfo
+        }
+
+        return <Advert key={index} data={dataItemFormatted} />
+      })}
     </>
   )
 }
