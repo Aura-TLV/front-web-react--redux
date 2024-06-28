@@ -46,6 +46,10 @@ export const getHTML = async (lang) => {
   return doAPIRequest(`/adverts/how-to/${lang}`, "get", null, "text/html");
 };
 
+export const getAboutHTML = async (lang) => {
+  return doAPIRequest(`/adverts/about/${lang}`, "get", null, "text/html");
+};
+
 export const uploadCV = async (file, phone) => {
   if (!file) return;
   return doAPIRequest('/users/file-upload', 'post', {
