@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/avieljobs/front-web/compare/v1.13.0...v1.14.0) (2024-06-28)
+
+
+### Features
+
+* add advert handler (mock) ([7a1b6bc](https://github.com/avieljobs/front-web/commit/7a1b6bc576f2592055202b61427509a54d4f830b))
+
 ## [1.13.0](https://github.com/avieljobs/front-web/compare/v1.12.0...v1.13.0) (2024-06-28)
 
 
