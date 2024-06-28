@@ -12,6 +12,12 @@ const Advert = ({ data }) => {
         setMoreInfo(!moreInfo);
     };
 
+    const btnSendHandler = (e, alertText) => {
+        // TODO: think of realization
+        e.preventDefault();
+        alert(alertText);
+    };
+
     const {
         number,
         name,
@@ -72,7 +78,7 @@ const Advert = ({ data }) => {
                 </a>
             </div>
             <div className="col-md-12">
-                <button>
+                <button onClick={e => btnSendHandler(e, t('mainPanel.list.ads.btnSendClicked'))}>
                     {t('mainPanel.list.ads.btnSend')}
                 </button>
             </div>
