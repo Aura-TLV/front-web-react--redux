@@ -130,3 +130,8 @@ export const sendVerificationEmail = async (eMail) => {
 export const getJobs = () => {
   return doAPIRequest("/jobs");
 }
+
+export const searchJobs = (payload) => {
+  const urlParams = new URLSearchParams(payload);
+  return doAPIRequest(`/jobs/search?${urlParams}`);
+}
