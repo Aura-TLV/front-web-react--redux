@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/avieljobs/front-web/compare/v1.14.0...v1.15.0) (2024-07-03)
+
+
+### Features
+
+* add jobs search from backend ([e19802d](https://github.com/avieljobs/front-web/commit/e19802d3e6e55ee629a16456f49a5c12a988b62f))
+
 ## [1.14.0](https://github.com/avieljobs/front-web/compare/v1.13.0...v1.14.0) (2024-06-28)
 
 
