@@ -33,6 +33,8 @@
       "eMail": "דוא\"ל",
       "password": "סיסמה",
       "passwordLink": "לחץ לאיפוס סיסמה",
+      "passwordResetSent": "הקישור לאיפוס הסיסמה שלך נשלח לאימייל שלך!",
+      "formSubmitMsg": "השינויים נשמרו בהצלחה",
       "name": "שם",
       "birthDate": "תאריך לידה",
       "city": "עיר מגורים",
@@ -70,6 +72,8 @@
       "eMail": "דואר אלקטרוני",
       "password": "סיסמה",
       "passwordLink": "לחץ לאיפוס סיסמה",
+      "passwordResetSent": "הקישור לאיפוס הסיסמה שלך נשלח לאימייל שלך!",
+      "formSubmitMsg": "השינויים נשמרו בהצלחה",
       "name": "שמך",
       "companyName": "שם החברה",
       "companyType": "מה החברה עושה",
@@ -92,7 +96,8 @@
       "enterCityName": "הזן שם עיר",
       "yourAds": {
         "label": "המודעות שלך",
-        "btnAdd": "הוסף"
+        "btnAdd": "הוסף",
+        "btnAddMessageLimit": "חרגת מהמגבלה להוספת מודעות להיום!"
       },
       "additionalInfo": "מידע נוסף",
       "additionalInfoPlaceholder": "מידע נוסף (אופציונלי)",

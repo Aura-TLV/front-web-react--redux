@@ -33,6 +33,8 @@
       "eMail": "Email",
       "password": "Password",
       "passwordLink": "Click to reset password",
+      "passwordResetSent": "Your reset password link had been sent to your email!",
+      "formSubmitMsg": "Changes saved successfully",
       "name": "Name",
       "birthDate": "Date of birth",
       "city": "City of residence",
@@ -70,6 +72,8 @@
       "eMail": "Email",
       "password": "Password",
       "passwordLink": "Click to reset password",
+      "passwordResetSent": "Your reset password link had been sent to your email!",
+      "formSubmitMsg": "Changes saved successfully",
       "name": "Your Name",
       "companyName": "Company Name",
       "companyType": "What the company does",
@@ -92,7 +96,8 @@
       "enterCityName": "Enter city name",
       "yourAds": {
         "label": "Your Ads",
-        "btnAdd": "Add"
+        "btnAdd": "Add",
+        "btnAddMessageLimit": "You have exceeded the limit for adding ads for today!"
       },
       "additionalInfo": "Additional Information",
       "additionalInfoPlaceholder": "Additional Information (optional)",

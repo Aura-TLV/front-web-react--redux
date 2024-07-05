@@ -1,15 +1,27 @@
 import { useTranslation } from "react-i18next";
 
 const FormEmployer = () => {
-  const submitHandler = (e) => {
-    e.preventDefault()
+
+  const passwordLinkHandler = (e, msg) => {
+    e.preventDefault();
+    alert(msg);
+  }
+
+  const adsLimitHandler = (e, msg) => {
+    e.preventDefault();
+    alert(msg);
+}
+
+  const submitHandler = (e, msg) => {
+    e.preventDefault();
+    alert(msg);
   }
 
   const { t } = useTranslation();
 
   return (
     <div>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={(e) => submitHandler(e, t('mainPanel.company.formSubmitMsg'))}>
 
         <div className="row">
           <div className="col-md-3">
@@ -22,7 +34,7 @@ const FormEmployer = () => {
           </div>
           <div className="col-md-3">
             <label htmlFor="password">{t('mainPanel.company.password')}:</label>
-            <p><a id="password" href="#">{t('mainPanel.company.passwordLink')}</a></p>
+            <p><a id="password" onClick={(e) => passwordLinkHandler(e, t('mainPanel.company.passwordResetSent'))} href="#">{t('mainPanel.company.passwordLink')}</a></p>
           </div>
         </div>
 
@@ -51,7 +63,7 @@ const FormEmployer = () => {
         <div className="row">
           <div className="col-md-12">
             <p>{t('mainPanel.company.yourAds.label')}:</p>
-            <a href="#">{t('mainPanel.company.yourAds.btnAdd')}</a>
+            <a href="#" onClick={(e) => adsLimitHandler(e, t('mainPanel.company.yourAds.btnAddMessageLimit'))}>{t('mainPanel.company.yourAds.btnAdd')}</a>
           </div>
         </div>
 

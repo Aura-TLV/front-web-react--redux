@@ -3,15 +3,22 @@ import './FormCandidate.css';
 
 const FormCandidate = () => {
 
-    const submitHandler = (e) => {
-        e.preventDefault()
+    const passwordLinkHandler = (e, msg) => {
+        e.preventDefault();
+        alert(msg);
+    }
+
+
+    const submitHandler = (e, msg) => {
+        e.preventDefault();
+        alert(msg);
     }
 
     const { t } = useTranslation();
 
     return (
         <div>
-            <form onSubmit={submitHandler}>
+            <form onSubmit={(e) => submitHandler(e, t('mainPanel.candidate.formSubmitMsg'))}>
 
                 <div className="row">
                     <div className="col-md-3">
@@ -24,7 +31,12 @@ const FormCandidate = () => {
                     </div>
                     <div className="col-md-3">
                         <label htmlFor="password">{t('mainPanel.candidate.password')}:</label>
-                        <p><a id="password" href="#" className="form-link">{t('mainPanel.candidate.passwordLink')}</a></p>
+                        <p>
+                            <a id="password" href="#" 
+                            onClick={(e) => passwordLinkHandler(e, t('mainPanel.candidate.passwordResetSent'))} className="form-link">
+                                {t('mainPanel.candidate.passwordLink')}
+                            </a>
+                        </p>
                     </div>
                 </div>
 
