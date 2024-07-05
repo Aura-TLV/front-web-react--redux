@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.1](https://github.com/avieljobs/front-web/compare/v1.17.0...v1.17.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* add missing handlers for personal cabinet forms buttons and links ([ab9bf50](https://github.com/avieljobs/front-web/commit/ab9bf506db933fb1ef8e5032e2ac2eabba123218))
+
 ## [1.17.0](https://github.com/avieljobs/front-web/compare/v1.16.0...v1.17.0) (2024-07-05)
 
 
