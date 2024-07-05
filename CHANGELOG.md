@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.2](https://github.com/avieljobs/front-web/compare/v1.17.1...v1.17.2) (2024-07-05)
+
+
+### Bug Fixes
+
+* use cv template direct download link from backend instead of gdrive ([bd684b3](https://github.com/avieljobs/front-web/commit/bd684b32e3f340659f2876fd565f0bfb92b49ac1))
+
 ## [1.17.1](https://github.com/avieljobs/front-web/compare/v1.17.0...v1.17.1) (2024-07-05)
 
 
