@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.16.0](https://github.com/avieljobs/front-web/compare/v1.15.0...v1.16.0) (2024-07-05)
+
+
+### Features
+
+* add gdpr cookie message ([e4001ea](https://github.com/avieljobs/front-web/commit/e4001eaca6b6334a92fe703ee6b415a321ca17df))
+
+
+### Bug Fixes
+
+* set default values in inputs (form candidate) ([17cb5e1](https://github.com/avieljobs/front-web/commit/17cb5e1c1acb6d75d777b0546d27ac5de5005852))
+
 ## [1.15.0](https://github.com/avieljobs/front-web/compare/v1.14.0...v1.15.0) (2024-07-03)
 
 
