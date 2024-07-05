@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import parseHTML from 'html-react-parser';
-import YoutubeVideo from "../common/YoutubeVideo";
+import CookieConsent from "react-cookie-consent";
 import { useTranslation } from "react-i18next";
+import YoutubeVideo from "../common/YoutubeVideo";
 import { getHTML } from "../../utils/fetcher";
+import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
 
 const getYouTubeCode = (lang) => {
   if (lang === 'en') return 'dIo9P89X6pE';
@@ -24,17 +26,29 @@ const HowTo = () => {
   });
 
   return (
-    <div>
-      <section>
-        <h1>{t('nav.howTo')}</h1>
+    <>
+      <div>
+        <section>
+          <h1>{t('nav.howTo')}</h1>
 
-        <YoutubeVideo code={getYouTubeCode(currentLang)} />
-        <hr />
-        {contents && parseHTML(contents)}
+          <YoutubeVideo code={getYouTubeCode(currentLang)} />
+          <hr />
+          {contents && parseHTML(contents)}
 
-      </section>
-    </div>
+        </section>
+      </div>
+      <CookieConsent
+        location="bottom"
+        buttonText={t('cookies.btnOK')}
+        cookieName={COOKIE_ACCEPTED_NAME}
+        style={COOKIE_ACCEPTED_STYLE}
+        buttonStyle={COOKIE_ACCEPTED_BTN_STYLE}
+        expires={COOKIE_EXPIRES_DAYS}
+      >
+        {t('cookies.message')}
+      </CookieConsent>
+    </>
   )
 }
 
-export default HowTo
+export default HowTo;

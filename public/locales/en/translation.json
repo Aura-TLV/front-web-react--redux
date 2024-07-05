@@ -4,6 +4,10 @@
     "goToHomePage": "Go to home page",
     "iAmCompany": "I am the company presenter"
   },
+  "cookies": {
+    "message": "Our smart website uses cookies to ensure you get the best experience. You don't need to get into it :)",
+    "btnOK": "I understand"
+  },
   "nav": {
     "jobs": "Jobs",
     "aboutUs": "About us",
