@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/avieljobs/front-web/compare/v1.16.0...v1.17.0) (2024-07-05)
+
+
+### Features
+
+* add favicon ([fe2c85a](https://github.com/avieljobs/front-web/commit/fe2c85af50fd1ef4cf41d4b7d3302ce1dbdccff9))
+
 ## [1.16.0](https://github.com/avieljobs/front-web/compare/v1.15.0...v1.16.0) (2024-07-05)
 
 
