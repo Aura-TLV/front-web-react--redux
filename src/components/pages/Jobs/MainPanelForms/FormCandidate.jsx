@@ -20,7 +20,7 @@ const FormCandidate = () => {
                     </div>
                     <div className="col-md-3">
                         <label htmlFor="eMail">{t('mainPanel.candidate.eMail')}:</label>
-                        <input id="eMail" />
+                        <input id="eMail" type="email" />
                     </div>
                     <div className="col-md-3">
                         <label htmlFor="password">{t('mainPanel.candidate.password')}:</label>
@@ -55,7 +55,7 @@ const FormCandidate = () => {
                     <div className="col-md-3">
                         <label htmlFor="status">{t('mainPanel.candidate.status.label')}</label>
                         <select id="status">
-                            <option value="teudat-zeut">{t('mainPanel.candidate.status.t1')}</option>
+                            <option value="teudat-zeut" selected>{t('mainPanel.candidate.status.t1')}</option>
                             <option value="work-visa">{t('mainPanel.candidate.status.t2')}</option>
                             <option value="tour-visa">{t('mainPanel.candidate.status.t3')}</option>
                             <option value="blue-paper">{t('mainPanel.candidate.status.t4')}</option>
@@ -74,29 +74,29 @@ const FormCandidate = () => {
                     {t('mainPanel.candidate.extraInfoLabel')}:<br />
                     <div className="col-md-4">
                         {t('mainPanel.candidate.workingHours')}:
-                        <input name="workingHours" type="checkbox" value={8} />8
+                        <input name="workingHours" checked type="checkbox" value={8} />8
                         <input name="workingHours" type="checkbox" value={10} />10
                         <input name="workingHours" type="checkbox" value={12} />12
                         <br />
                         {t('mainPanel.candidate.wagePerHour')}:
-                        <input name="wagePerHour" type="checkbox" value={33} />33+
+                        <input name="wagePerHour" checked type="checkbox" value={33} />33+
                         <input name="wagePerHour" type="checkbox" value={40} />40+
                         <input name="wagePerHour" type="checkbox" value={50} />50+
                     </div>
                     <div className="col-md-4">
                         {t('mainPanel.candidate.driver')}:
                         <input name="driver" type="radio" />{t('mainPanel.candidate.controls.checkboxY')}
-                        <input name="driver" type="radio" />{t('mainPanel.candidate.controls.checkboxN')}
+                        <input name="driver" checked type="radio" />{t('mainPanel.candidate.controls.checkboxN')}
                         <br />
                         {t('mainPanel.candidate.lunch')}:
                         <input name="lunch" type="radio" />{t('mainPanel.candidate.controls.checkboxY')}
-                        <input name="lunch" type="radio" />{t('mainPanel.candidate.controls.checkboxN')}
+                        <input name="lunch" checked type="radio" />{t('mainPanel.candidate.controls.checkboxN')}
                         <br />
                     </div>
                     <div className="col-md-4">
                         {t('mainPanel.candidate.living')}:
                         <input name="living" type="radio" />{t('mainPanel.candidate.controls.checkboxY')}
-                        <input name="living" type="radio" />{t('mainPanel.candidate.controls.checkboxN')}
+                        <input name="living" checked type="radio" />{t('mainPanel.candidate.controls.checkboxN')}
                     </div>
                 </div>
 
@@ -104,7 +104,7 @@ const FormCandidate = () => {
                     <div className="col-md-4">
                         {t('mainPanel.candidate.contractType.label')}:
                         <select name="contractType">
-                            <option name="asaka">{t('mainPanel.candidate.contractType.asaka')}</option>
+                            <option name="asaka" selected>{t('mainPanel.candidate.contractType.asaka')}</option>
                             <option name="asama">{t('mainPanel.candidate.contractType.asama')}</option>
                         </select>
                     </div>
