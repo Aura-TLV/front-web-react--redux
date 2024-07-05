@@ -1,6 +1,9 @@
 import { useTranslation } from "react-i18next";
 import './FormCandidate.css';
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const EXAMPLE_CV_LINK = `${BACKEND_URL}/users/cv-example`;
+
 const FormCandidate = () => {
 
     const passwordLinkHandler = (e, msg) => {
@@ -125,7 +128,7 @@ const FormCandidate = () => {
                         <input type="file" accept='application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf' id="cv" />
                     </div>
                     <div className="col-md-4">
-                        <a className="form-link" href="https://docs.google.com/document/d/1pHJcD5KlHKN_4TbI2BYCKwwSauzYi8Hi/edit?usp=sharing&ouid=114572637345510374218&rtpof=true&sd=true" target="_blank">{t('mainPanel.candidate.cvLink')}</a>
+                        <a className="form-link" href={EXAMPLE_CV_LINK} target="_blank">{t('mainPanel.candidate.cvLink')}</a>
                     </div>
                 </div>
 
