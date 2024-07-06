@@ -5,8 +5,9 @@ import { useTranslation } from "react-i18next";
 import YoutubeVideo from "../common/YoutubeVideo";
 import { getHTML } from "../../utils/fetcher";
 import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
+import changeHTMLDirection from "../../utils/changeHTMLDirection";
 
-const getYouTubeCode = (lang) => {
+const getYouTubeCode = (lang) => { // TODO: replace codes to real videos
   if (lang === 'en') return 'dIo9P89X6pE';
   if (lang === 'ru') return 'Gk3tXQzCeJA';
   if (lang === 'uk') return 'CVTEMMrEMmQ';
@@ -20,6 +21,10 @@ const HowTo = () => {
   const currentLang = i18n.language.split('-')[0];
 
   const [contents, setContents] = useState(null);
+
+  useEffect(() => {
+    changeHTMLDirection(currentLang);
+  }, [currentLang]);
 
   useEffect(() => {
     getHTML(currentLang).then(data => {

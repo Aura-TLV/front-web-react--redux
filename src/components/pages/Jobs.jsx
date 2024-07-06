@@ -1,12 +1,19 @@
+import { useEffect } from "react";
 import CookieConsent from "react-cookie-consent";
 import { useTranslation } from "react-i18next";
 import MainPanel from "./Jobs/MainPanel";
 import QuestionsContacts from "./Jobs/QuestionsContacts";
 import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
+import changeHTMLDirection from "../../utils/changeHTMLDirection";
 
 const Jobs = () => {
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const currentLanguage = i18n.language.split('-')[0];
+    changeHTMLDirection(currentLanguage);
+  }, [i18n.language]);
 
   return (
     <>

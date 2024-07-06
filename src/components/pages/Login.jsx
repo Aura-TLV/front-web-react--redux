@@ -3,18 +3,22 @@ import { useTranslation } from 'react-i18next';
 import './Login.css';
 import { Link } from 'react-router-dom';
 import { sendVerificationEmail, authLogin } from '../../utils/fetcher';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
+import changeHTMLDirection from "../../utils/changeHTMLDirection";
 
 const Login = () => {
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    useEffect(() => {
+        const currentLanguage = i18n.language.split('-')[0];
+        changeHTMLDirection(currentLanguage);
+      }, [i18n.language]);
 
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
-
-
 
     const submitHandler = async (e, alertMsg) => {
         e.preventDefault();

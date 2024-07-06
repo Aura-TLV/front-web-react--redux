@@ -2,16 +2,22 @@ import CookieConsent from "react-cookie-consent";
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import './Registration.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import RegCandidateForm from './Registration/RegCandidateForm';
 import RegCompanyForm from './Registration/RegCompanyForm';
 import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
+import changeHTMLDirection from "../../utils/changeHTMLDirection";
 
 const Registration = () => {
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
-    const [isCandidate, setIsCandidate ] = useState(true);
+    useEffect(() => {
+        const currentLanguage = i18n.language.split('-')[0];
+        changeHTMLDirection(currentLanguage);
+    }, [i18n.language]);
+
+    const [isCandidate, setIsCandidate] = useState(true);
     const toggleCandidate = () => setIsCandidate(!isCandidate);
 
     return (
@@ -24,7 +30,7 @@ const Registration = () => {
                     <input type="checkbox" onChange={toggleCandidate} />
                     {t('general.iAmCompany')}
                 </div>
-                { isCandidate ? <RegCandidateForm /> : <RegCompanyForm /> }
+                {isCandidate ? <RegCandidateForm /> : <RegCompanyForm />}
                 <Link to={'/login'} className='reg-link' id="regLink">
                     {t('mainPanel.auth.loginLink')}
                 </Link>

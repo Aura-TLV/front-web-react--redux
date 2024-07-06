@@ -3,10 +3,17 @@ import CookieConsent from "react-cookie-consent";
 import AdvertsList from "../Adverts/AdvertsList";
 import AdvertsSearch from "../Adverts/AdvertsSearch";
 import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
+import { useEffect } from "react";
+import changeHTMLDirection from "../../utils/changeHTMLDirection";
 
 const Adverts = () => {
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const currentLanguage = i18n.language.split('-')[0];
+    changeHTMLDirection(currentLanguage);
+  }, [i18n.language]);
 
   return (
     <>

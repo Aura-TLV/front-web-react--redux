@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from '../../i18n';
 import './Navbar.css';
+import changeHTMLDirection from "../../utils/changeHTMLDirection";
 
 const Navbar = () => {
 
@@ -9,6 +10,7 @@ const Navbar = () => {
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
+        changeHTMLDirection(lng);
     }
 
     const getCurrentLanguage = () => {
