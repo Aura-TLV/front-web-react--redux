@@ -9,6 +9,8 @@ import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE,
 const getYouTubeCode = (lang) => {
   if (lang === 'en') return 'dIo9P89X6pE';
   if (lang === 'ru') return 'Gk3tXQzCeJA';
+  if (lang === 'uk') return 'CVTEMMrEMmQ';
+  if (lang === 'ar') return 'KLcVz1tWjj8';
   return 'LXb3EKWsInQ'; // for hebrew
 }
 

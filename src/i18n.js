@@ -3,7 +3,9 @@ import { initReactI18next } from "react-i18next";
 import detector from "i18next-browser-languagedetector";
 
 import translationHE from '../public/locales/he/translation.json';
+import translationAR from '../public/locales/ar/translation.json';
 import translationEN from '../public/locales/en/translation.json';
+import translationUA from '../public/locales/ua/translation.json';
 import translationRU from '../public/locales/ru/translation.json';
 
 // the translations
@@ -11,12 +13,18 @@ const resources = {
   he: {
     translation: translationHE
   },
+  ar: {
+    translation: translationAR
+  },
   en: {
     translation: translationEN
   },
   ru: {
     translation: translationRU
-  }
+  },
+  uk: {
+    translation: translationUA
+  },
 };
 
 i18n

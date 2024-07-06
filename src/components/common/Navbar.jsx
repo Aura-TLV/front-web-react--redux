@@ -53,7 +53,9 @@ const Navbar = () => {
                             onChange={(e) => changeLanguage(e.target.value)}
                         >
                             <option value="he">HE</option>
+                            <option value="ar">AR</option>
                             <option value="en">EN</option>
+                            <option value="uk">UA</option>
                             <option value="ru">RU</option>
                         </select>
                     </li>
