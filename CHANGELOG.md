@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/avieljobs/front-web/compare/v1.17.2...v1.18.0) (2024-07-06)
+
+
+### Features
+
+* add arabic and ukranian languages ([4491455](https://github.com/avieljobs/front-web/commit/4491455438f93323be2aacdad3a7bcf80fb4e043))
+
 ## [1.17.2](https://github.com/avieljobs/front-web/compare/v1.17.1...v1.17.2) (2024-07-05)
 
 
