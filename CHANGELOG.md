@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.1](https://github.com/avieljobs/front-web/compare/v1.18.0...v1.18.1) (2024-07-06)
+
+
+### Bug Fixes
+
+* make html dir adaptive to selected language ([5172079](https://github.com/avieljobs/front-web/commit/51720792e50a3624775d229b5a2e48e7dcf5e3f5))
+
 ## [1.18.0](https://github.com/avieljobs/front-web/compare/v1.17.2...v1.18.0) (2024-07-06)
 
 
