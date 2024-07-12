@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.3](https://github.com/avieljobs/front-web/compare/v1.19.2...v1.19.3) (2024-07-12)
+
+
+### Bug Fixes
+
+* login - change email to phone ([7db9a3f](https://github.com/avieljobs/front-web/commit/7db9a3fc94053d7977f0b17725f3e11240f5f8ea))
+
 ## [1.19.2](https://github.com/avieljobs/front-web/compare/v1.19.1...v1.19.2) (2024-07-12)
 
 
