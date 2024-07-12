@@ -107,6 +107,9 @@
         "btnSave": "Сохранить изменения"
       }
     },
+    "login": {
+      "confirmationCode": "Введите код подтверждения из SMS"
+    },
     "auth": {
       "login": "Телефон",
       "password": "Пароль",

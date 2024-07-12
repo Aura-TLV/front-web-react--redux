@@ -107,6 +107,9 @@
         "btnSave": "Зберегти зміни"
       }
     },
+    "login": {
+      "confirmationCode": "Введіть код підтвердження з SMS"
+    },
     "auth": {
       "login": "Телефон",
       "password": "Пароль",

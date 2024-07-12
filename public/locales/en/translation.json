@@ -147,6 +147,9 @@
         "city": "Your company's location"
       }
     },
+    "login": {
+      "confirmationCode": "Type your confirmation code from SMS"
+    },
     "list": {
       "search": {
         "city": "City",

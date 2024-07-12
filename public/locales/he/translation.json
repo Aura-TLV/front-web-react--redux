@@ -107,6 +107,9 @@
         "btnSave": "שמור שינויים"
       }
     },
+    "login": {
+      "confirmationCode": "הקלד את קוד האישור שלך מ-SMS"
+    },
     "auth": {
       "login": "טלפון",
       "password": "סיסמה",
