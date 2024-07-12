@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const Advert = ({ data }) => {
 
     const { t } = useTranslation();
 
     const [moreInfo, setMoreInfo] = useState(false);
+    const [galleryOpen, setGalleryOpen] = useState(false);
 
     const toggleAd = (e) => {
         e.preventDefault();
@@ -21,6 +24,7 @@ const Advert = ({ data }) => {
     const {
         number,
         name,
+        images,
         city,
         wagePerHour,
         workingHoursStart,
@@ -35,10 +39,14 @@ const Advert = ({ data }) => {
         additionalInfo
     } = data;
 
+    const galleryList = images.map((image) => {
+        return { src: image, width: 1280, height: 720 }
+    });
+
     return (
         <div className="row">
             <div className="col-md-12">
-                <h1>#{number} - {name} ({city})</h1>
+                <h1 className='advert-h1'>#{number} - {name} ({city})</h1>
             </div>
             <div className="col-md-12">
                 <b>{t('mainPanel.list.ads.wagePerHour')}:</b> {wagePerHour}₪&nbsp;
@@ -53,7 +61,7 @@ const Advert = ({ data }) => {
                     <b>{t('mainPanel.list.ads.shifts.label')}:</b> {t('mainPanel.list.ads.shifts.morning')} ({morningShift}), {t('mainPanel.list.ads.shifts.night')} ({nightShift})
                 </div>
                 <div className="col-md-12">
-                    <b>{t('mainPanel.list.ads.break')}:</b> {workBreak}&nbsp;
+                    <b>{t('mainPanel.list.ads.break')}:</b> {workBreak.exists ? `${workBreak.lengthMin} ${t('mainPanel.list.ads.minutes')}` : t('mainPanel.list.ads.no')}&nbsp;
                     <b>{t('mainPanel.list.ads.lunch')}:</b> {lunch ? t('mainPanel.list.ads.yes')
                         : t('mainPanel.list.ads.no')}&nbsp;
                     <b>{t('mainPanel.list.ads.living')}:</b> {living ? t('mainPanel.list.ads.yes')
@@ -65,16 +73,23 @@ const Advert = ({ data }) => {
                     <b>{t('mainPanel.list.ads.additionalInfo')}:</b> {additionalInfo}
                 </div>
                 <div className="col-md-12">
-                    <a href="https://motor.ru/thumb/908x0/filters:quality(75):no_upscale()/imgs/2022/08/23/11/5553518/20b027491f7209ca6f58a3ccc4983183b270ca4a.jpg" target='_blank'>{t('mainPanel.list.ads.images')}</a>
+                    <a href="#" onClick={() => setGalleryOpen(true)}>{t('mainPanel.list.ads.images')}</a>
                 </div>
+                {/* gallery start */}
+                <Lightbox
+                    open={galleryOpen}
+                    close={() => setGalleryOpen(false)}
+                    slides={galleryList}
+                />
+                {/* gallery end */}
             </div>
 
             <div className="col-md-12">
                 <a href="#" onClick={e => toggleAd(e)}>
-                    {moreInfo ? 
-                    t('mainPanel.list.ads.less') 
-                    : t('mainPanel.list.ads.more') 
-                }
+                    {moreInfo ?
+                        t('mainPanel.list.ads.less')
+                        : t('mainPanel.list.ads.more')
+                    }
                 </a>
             </div>
             <div className="col-md-12">
