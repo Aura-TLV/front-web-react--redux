@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.19.0](https://github.com/avieljobs/front-web/compare/v1.18.1...v1.19.0) (2024-07-12)
+
+
+### Features
+
+* add jobs break length, jobs images ([afcd4b9](https://github.com/avieljobs/front-web/commit/afcd4b9b3d1ff8eeac48317bfc0f9b789d2ccd46))
+
+
+### Bug Fixes
+
+* replace mongoId in jobs to regular id ([bb47128](https://github.com/avieljobs/front-web/commit/bb47128ead81bcdaf32628fa58a811d8c20fa9ef))
+
 ## [1.18.1](https://github.com/avieljobs/front-web/compare/v1.18.0...v1.18.1) (2024-07-06)
 
 
