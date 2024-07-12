@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.1](https://github.com/avieljobs/front-web/compare/v1.19.0...v1.19.1) (2024-07-12)
+
+
+### Bug Fixes
+
+* jobs page - correct language consts ([c48fa7f](https://github.com/avieljobs/front-web/commit/c48fa7f77ba8aff7cddeb908f38bea8ca751c8da))
+
 ## [1.19.0](https://github.com/avieljobs/front-web/compare/v1.18.1...v1.19.0) (2024-07-12)
 
 
