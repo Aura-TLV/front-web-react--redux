@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { searchJobs } from '../../utils/fetcher';
+import { searchJobs } from '../../../utils/fetcher';
 
 const AdvertsSearch = () => {
 

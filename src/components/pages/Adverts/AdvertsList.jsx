@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Advert from "./AdvertsList/Advert"
-import { getJobs } from "../../utils/fetcher";
+import { getJobs } from "../../../utils/fetcher";
 
 const AdvertsList = () => {
 
@@ -15,7 +15,7 @@ const AdvertsList = () => {
       {jobAdverts && jobAdverts.map((dataItem, index) => {
 
         const dataItemFormatted = {
-          number: dataItem._id,
+          number: index, //dataItem._id,
           name: dataItem.title.he,
           city: 'Hadera',
           wagePerHour: dataItem.wagePerHour,

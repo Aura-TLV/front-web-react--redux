@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import CookieConsent from "react-cookie-consent";
-import AdvertsList from "../Adverts/AdvertsList";
-import AdvertsSearch from "../Adverts/AdvertsSearch";
+import AdvertsList from "./Adverts/AdvertsList";
+import AdvertsSearch from "./Adverts/AdvertsSearch";
 import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
 import { useEffect } from "react";
 import changeHTMLDirection from "../../utils/changeHTMLDirection";
