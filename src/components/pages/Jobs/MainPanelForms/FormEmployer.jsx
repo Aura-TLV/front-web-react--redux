@@ -10,7 +10,7 @@ const FormEmployer = () => {
   const adsLimitHandler = (e, msg) => {
     e.preventDefault();
     alert(msg);
-}
+  }
 
   const submitHandler = (e, msg) => {
     e.preventDefault();
@@ -57,6 +57,16 @@ const FormEmployer = () => {
           <div className="col-md-12">
             <label htmlFor="phone">{t('mainPanel.company.phone')}:</label>
             <input id="phone" />
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-md-4">
+            {t('mainPanel.company.contractType.label')}:
+            <select name="contractType">
+              <option name="asaka" selected>{t('mainPanel.company.contractType.asaka')}</option>
+              <option name="asama">{t('mainPanel.company.contractType.asama')}</option>
+            </select>
           </div>
         </div>
 

@@ -45,7 +45,7 @@
         "t1": "Izrahut (citizenship)",
         "t2": "Work visa",
         "t3": "Tourist visa",
-        "t4": "Blue paper (5א)"
+        "t4": "Blue paper (5ס'2א)"
       },
       "additionalInfo": "Tell us a little about yourself",
       "extraInfoLabel": "Specify additional criteria",
@@ -54,11 +54,6 @@
       "driver": "Transportation",
       "lunch": "Food",
       "living": "Accommodation",
-      "contractType": {
-        "label": "Type of employment",
-        "asaka": "Asaka",
-        "asama": "Asama"
-      },
       "cv": "Your resume (.doc, .docx, .pdf) - optional",
       "cvLink": "Download resume form",
       "controls": {
@@ -87,7 +82,12 @@
         "t1": "Citizenship",
         "t2": "Work Visa",
         "t3": "Tourist Visa",
-        "t4": "Blue Paper (5א)"
+        "t4": "Blue Paper (5ס'2א)"
+      },
+      "contractType": {
+        "label": "Type of employment",
+        "asaka": "Work through employment (intermediary)",
+        "asama": "Work directly"
       },
       "language": "Language Requirements",
       "driver": "Transportation",
@@ -126,10 +126,10 @@
         "phone": "Tell your Israeli phone number",
         "status": {
           "label": "Which status do you have in Israel?",
-          "t1": "Teudat zeut (citizenship)",
-          "t2": "Working visa",
+          "t1": "Have citizenship",
+          "t2": "Work visa (B1)",
           "t3": "Tourist visa (B2)",
-          "t4": "Blue paper (5א)"
+          "t4": "Refugee status (5ס'2א)"
         },
         "vacancy": "Vacancy that you want",
         "city": "Which city it should be located"

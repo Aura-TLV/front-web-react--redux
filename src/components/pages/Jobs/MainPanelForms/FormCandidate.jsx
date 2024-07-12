@@ -117,13 +117,6 @@ const FormCandidate = () => {
 
                 <div className="row">
                     <div className="col-md-4">
-                        {t('mainPanel.candidate.contractType.label')}:
-                        <select name="contractType">
-                            <option name="asaka" selected>{t('mainPanel.candidate.contractType.asaka')}</option>
-                            <option name="asama">{t('mainPanel.candidate.contractType.asama')}</option>
-                        </select>
-                    </div>
-                    <div className="col-md-4">
                         <label htmlFor="cv">{t('mainPanel.candidate.cv')}:</label>
                         <input type="file" accept='application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf' id="cv" />
                     </div>
