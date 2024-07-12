@@ -79,10 +79,10 @@
       "experience": "Experience",
       "status": {
         "label": "Documents:",
-        "t1": "Citizenship",
-        "t2": "Work Visa",
-        "t3": "Tourist Visa",
-        "t4": "Blue Paper (5ס'2א)"
+        "t1": "Have citizenship",
+          "t2": "Work visa (B1)",
+          "t3": "Tourist visa (B2)",
+          "t4": "Refugee status (5ס'2א)"
       },
       "contractType": {
         "label": "Type of employment",
