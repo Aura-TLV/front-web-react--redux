@@ -39,9 +39,9 @@ const Advert = ({ data }) => {
         additionalInfo
     } = data;
 
-    const galleryList = images.map((image) => {
+    const galleryList = images.length > 0 ? images.map((image) => {
         return { src: image, width: 1280, height: 720 }
-    });
+    }) : [];
 
     return (
         <div className="row">
@@ -72,15 +72,16 @@ const Advert = ({ data }) => {
                 <div className="col-md-12">
                     <b>{t('mainPanel.list.ads.additionalInfo')}:</b> {additionalInfo}
                 </div>
-                <div className="col-md-12">
-                    <a href="#" onClick={() => setGalleryOpen(true)}>{t('mainPanel.list.ads.images')}</a>
-                </div>
                 {/* gallery start */}
-                <Lightbox
+                {galleryList.length > 1 && <div className="col-md-12">
+                    <a href="#" onClick={() => setGalleryOpen(true)}>{t('mainPanel.list.ads.images')}</a>
+                </div>}
+                {galleryList.length > 1 && <Lightbox
                     open={galleryOpen}
                     close={() => setGalleryOpen(false)}
                     slides={galleryList}
-                />
+                />}
+                
                 {/* gallery end */}
             </div>
 
