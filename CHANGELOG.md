@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.4](https://github.com/avieljobs/front-web/compare/v1.19.3...v1.19.4) (2024-07-12)
+
+
+### Bug Fixes
+
+* confirmation code page update ([23fbfd6](https://github.com/avieljobs/front-web/commit/23fbfd66f20107f1fc35eb80f294920d578354d6))
+
 ## [1.19.3](https://github.com/avieljobs/front-web/compare/v1.19.2...v1.19.3) (2024-07-12)
 
 
