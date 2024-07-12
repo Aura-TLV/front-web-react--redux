@@ -2,7 +2,7 @@ import CookieConsent from "react-cookie-consent";
 import { useTranslation } from 'react-i18next';
 import './Login.css';
 import { Link } from 'react-router-dom';
-import { sendVerificationEmail, authLogin } from '../../utils/fetcher';
+import { sendVerificationCode, authLogin } from '../../utils/fetcher';
 import { useState, useEffect } from 'react';
 import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
 import changeHTMLDirection from "../../utils/changeHTMLDirection";
@@ -22,7 +22,8 @@ const Login = () => {
 
     const submitHandler = async (e, alertMsg) => {
         e.preventDefault();
-        await sendVerificationEmail(login);
+     
+        await sendVerificationCode(login);
         await authLogin(login, password, rememberMe);
 
         alert(alertMsg);

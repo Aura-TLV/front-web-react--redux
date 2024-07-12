@@ -108,7 +108,7 @@
       }
     },
     "auth": {
-      "login": "Phone/email",
+      "login": "Phone",
       "password": "Password",
       "rememberMe": "Remember me",
       "btnLogin": "Log in",

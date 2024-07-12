@@ -98,10 +98,10 @@ export const authLogin = async (login, password, rememberMe) => {
   const response = await doAPIRequest("/auth/login", "post", { email: login, password });
   
   if (!response) {
-    alert('User not found');
+    //alert('User not found');
   } else {
-    const token = response.token;
     if (rememberMe) {
+      const token = response.token;
       return localStorage.setItem('avielsmart-jwt', token);
     }
   }
@@ -125,6 +125,16 @@ export const sendEmail = async (titleString, logInString, password, eMail) => {
 
 export const sendVerificationEmail = async (eMail) => {
   return doAPIRequest("/auth/email", "post", { eMail });
+};
+
+export const sendVerificationCode = async (phone) => {
+  if (phone.startsWith('0')) phone = phone.replace('0', '+972');
+  return doAPIRequest("/auth/otp", "post", { phone });
+};
+
+export const sendVerificationCodeConfirmation = async (phone, otp) => {
+  if (phone.startsWith('0')) phone = phone.replace('0', '+972');
+  return doAPIRequest("/auth/otp-verify", "post", { phone, otp });
 };
 
 export const getJobs = () => {

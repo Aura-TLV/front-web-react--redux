@@ -108,7 +108,7 @@
       }
     },
     "auth": {
-      "login": "טלפון/אימייל",
+      "login": "טלפון",
       "password": "סיסמה",
       "rememberMe": "זכור אותי",
       "btnLogin": "התחבר",
