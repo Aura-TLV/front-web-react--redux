@@ -19,6 +19,11 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script>
+    if (document.location.hostname === 'localhost') {
+      // %MODE% is vite env variable for running mode (should be printed when no production)
+      document.title = '[%MODE%] Smart Aviel Jobs';
+    }
+  </script>
 </body>
-
 </html>
