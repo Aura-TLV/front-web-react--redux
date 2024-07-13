@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.0](https://github.com/avieljobs/front-web/compare/v1.19.4...v1.20.0) (2024-07-13)
+
+
+### Features
+
+* add env printing in title on non-prod mode ([ac55f00](https://github.com/avieljobs/front-web/commit/ac55f008d8818b785c0242350d7b78f9b163f637))
+
 ## [1.19.4](https://github.com/avieljobs/front-web/compare/v1.19.3...v1.19.4) (2024-07-12)
 
 
