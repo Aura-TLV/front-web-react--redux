@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
-import parseHTML from 'html-react-parser';
+import parse from 'html-react-parser';
 import CookieConsent from "react-cookie-consent";
 import { useTranslation } from "react-i18next";
 import { getAboutHTML } from "../../utils/fetcher";
 import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
 import changeHTMLDirection from "../../utils/changeHTMLDirection";
+import HeroSection from "./About/HeroSection";
+import InfoSection from "./About/InfoSection";
+import ValueSection from "./About/ValueSection";
+import HowSection from "./About/HowSection";
+import FaqSection from "./About/FaqSection";
+import SubscribeSection from "./About/SubscribeSection";
+import FooterSection from "./About/FooterSection";
+
+
 
 
 const About = () => {
@@ -27,12 +36,21 @@ const About = () => {
 
   return (
     <>
-      <div>
+      {/*<div>
         <h1>{t('nav.aboutUs')}</h1>
         <p>
           {contents && parseHTML(contents)}
         </p>
-      </div>
+      </div> */}
+
+      <HeroSection />
+      <InfoSection />
+      <ValueSection />
+      <HowSection />
+      <FaqSection />
+      <SubscribeSection />
+      <FooterSection />
+
       <CookieConsent
         location="bottom"
         buttonText={t('cookies.btnOK')}
