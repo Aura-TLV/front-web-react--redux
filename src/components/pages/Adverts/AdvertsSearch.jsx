@@ -29,7 +29,7 @@ const AdvertsSearch = () => {
     <form onSubmit={(e) => submitHandler(e)}>
       <div className="row">
         <div className="col-md-12">
-          <label htmlFor="city">
+          <label htmlFor="city" style={{fontSize: '10px', color: 'red'}}>
             <h4>{t('mainPanel.list.search.city')}</h4>
           </label>
           <input onMouseLeave={(e) => onChangeHandler('city', e.target.value)}
