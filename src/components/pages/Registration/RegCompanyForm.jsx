@@ -81,85 +81,41 @@ const RegCompanyForm = () => {
     }
 
     return (
-        <form onSubmit={e => submitHandler(e, t('mainPanel.reg.finalMessage'))}>
-            <div className="col-md-12">
-                <label htmlFor="name">{t('mainPanel.reg.company.name')}</label>
-                <input type="text" 
-                    onKeyDown={(e) => onChangeHandler('name', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('name', e.target.value)}
-                    onChange={(e) => onChangeHandler('name', e.target.value)} 
-                id="name" required />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="profile">{t('mainPanel.reg.company.profile')}</label>
-                <input type="text" 
-                    onKeyDown={(e) => onChangeHandler('profile', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('profile', e.target.value)}
-                    onChange={(e) => onChangeHandler('profile', e.target.value)} 
-                id="profile" required />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="jobs">{t('mainPanel.reg.company.positions')}</label>
-                <input type="text" 
-                    onKeyDown={(e) => onChangeHandler('jobs', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('jobs', e.target.value)}
-                    onChange={(e) => onChangeHandler('jobs', e.target.value)} 
-                id="jobs" required />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="workersQuantity">{t('mainPanel.reg.company.workersQuantity')}</label>
-                <input type="number" 
-                    onMouseLeave={(e) => onChangeHandler('workersQuantity', e.target.value)}
-                    onKeyDown={(e) => onChangeHandler('workersQuantity', e.target.value)}
-                    onChange={(e) => onChangeHandler('workersQuantity', e.target.value)} 
-                id="workersQuantity" defaultValue={1} min={1} max={999} required />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="phone">{t('mainPanel.reg.company.phone')}</label>
-                <input type="text"
-                    onKeyDown={(e) => onChangeHandler('phone', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('phone', e.target.value)}
-                    onChange={(e) => onChangeHandler('phone', e.target.value)}
-                id="phone" />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="email">{t('mainPanel.reg.company.eMail')}</label>
-                <input type="email"
-                        onKeyDown={(e) => onChangeHandler('eMail', e.target.value)}
-                        onMouseLeave={(e) => onChangeHandler('eMail', e.target.value)}
-                        onChange={(e) => onChangeHandler('eMail', e.target.value)} 
-                        id="email" 
-                required />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="workStart">{t('mainPanel.reg.company.workingHours.start')}</label>
-                <input type="time"
-                    onKeyDown={(e) => onChangeHandler('workStart', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('workStart', e.target.value)}
-                    onChange={(e) => onChangeHandler('workStart', e.target.value)}  
-                defaultValue={'00:00'} />
-            </div>
-            <div className="col-md-12">
-            <label htmlFor="workFinish">{t('mainPanel.reg.company.workingHours.finish')}</label>
-            <input type="time" 
-                    onKeyDown={(e) => onChangeHandler('workFinish', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('workFinish', e.target.value)}
-                    onChange={(e) => onChangeHandler('workFinish', e.target.value)} 
-                    id="workFinish"
-            defaultValue={'00:00'} />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="city">{t('mainPanel.reg.company.city')}</label>
-                <input type="text"
-                    onKeyDown={(e) => onChangeHandler('city', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('city', e.target.value)}
-                    onChange={(e) => onChangeHandler('city', e.target.value)} 
-                id="city" required />
-            </div>
-            <div className="col-md-12">
-                <button type="submit">{t('mainPanel.reg.btnSubmit')}</button>
-            </div>
-        </form>
+        <div className="form-decoration">
+            <form onSubmit={e => submitHandler(e, t('mainPanel.reg.finalMessage'))}>
+                <input className="border rounded-pill form-control text-center fw-semibold mb-3 py-2 border-0" type="text" id="name" placeholder={t('mainPanel.reg.company.name')} required="" autoFocus=""
+                onKeyDown={(e) => onChangeHandler('name', e.target.value)}
+                onMouseLeave={(e) => onChangeHandler('name', e.target.value)}
+                onChange={(e) => onChangeHandler('name', e.target.value)} 
+                />
+                <input className="border rounded-pill form-control text-center fw-semibold mb-3 py-2 border-0" type="text" id="profile" placeholder={t('mainPanel.reg.company.profile')} required=""
+                onKeyDown={(e) => onChangeHandler('profile', e.target.value)}
+                onMouseLeave={(e) => onChangeHandler('profile', e.target.value)}
+                onChange={(e) => onChangeHandler('profile', e.target.value)} 
+                />
+                <input className="form-control text-center fw-semibold mb-3 py-2 border-0" type="tel" id="phone" inputMode="tel" required="" pattern="05\d{1}[-\s]*\d{3}[-\s]*\d{4}" placeholder={t('mainPanel.reg.company.phone')}
+                onKeyDown={(e) => onChangeHandler('phone', e.target.value)}
+                onMouseLeave={(e) => onChangeHandler('phone', e.target.value)}
+                onChange={(e) => onChangeHandler('phone', e.target.value)}
+                />
+                <input className="border rounded-pill form-control text-center fw-semibold mb-3 py-2 border-0" type="text" placeholder={t('mainPanel.reg.login')} inputMode="latin" required="" />
+                <input className="border rounded-pill form-control text-center fw-semibold mb-3 py-2 border-0" type="email" id="email" name="email" placeholder={t('mainPanel.reg.company.eMail')} inputMode="email" required=""
+                onKeyDown={(e) => onChangeHandler('eMail', e.target.value)}
+                onMouseLeave={(e) => onChangeHandler('eMail', e.target.value)}
+                onChange={(e) => onChangeHandler('eMail', e.target.value)} 
+                />
+                <div className="position-relative">
+                    <input className="border rounded-pill form-control text-center fw-semibold mb-3 py-2 border-0" type="password" id="passwordInput-1" placeholder={t('mainPanel.reg.password')} required="" autoComplete="on" inputMode="latin" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-eye position-absolute" id="togglePassword-1" style={{top: '50%', right: '20px', transform: 'translateY(-50%)', width: '30px', height: '20px'}}>
+                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                    </svg>
+                </div>
+                <div className="d-flex justify-content-center">
+                    <button className="btn btn-primary mt-3" type="submit">{t('mainPanel.reg.btnReg')}</button>
+                </div>
+            </form>
+        </div>
     )
 }
 

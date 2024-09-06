@@ -13,8 +13,8 @@ const MainPanel = () => {
 
     return (
         <>
-            <div className="container">
-                <input type="checkbox" onChange={toggleCandidate} />
+            <div className="container mb-3">
+                <span className="mx-3"><input type="checkbox" onChange={toggleCandidate} /></span>
                 {t('general.iAmCompany')}
             </div>
 

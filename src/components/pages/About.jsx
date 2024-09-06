@@ -1,48 +1,38 @@
-import { useEffect, useState } from "react";
-import parse from 'html-react-parser';
+import { useEffect } from "react";
 import CookieConsent from "react-cookie-consent";
 import { useTranslation } from "react-i18next";
 import { getAboutHTML } from "../../utils/fetcher";
 import { COOKIE_ACCEPTED_NAME, COOKIE_ACCEPTED_BTN_STYLE, COOKIE_ACCEPTED_STYLE, COOKIE_EXPIRES_DAYS } from '../../utils/consts';
 import changeHTMLDirection from "../../utils/changeHTMLDirection";
+import { Container } from 'react-bootstrap';
 import HeroSection from "./About/HeroSection";
 import InfoSection from "./About/InfoSection";
 import ValueSection from "./About/ValueSection";
 import HowSection from "./About/HowSection";
 import FaqSection from "./About/FaqSection";
+
 import SubscribeSection from "./About/SubscribeSection";
 import FooterSection from "./About/FooterSection";
 
-
-
-
 const About = () => {
-
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language.split('-')[0];
 
-  const [contents, setContents] = useState(null);
-
+  // const [contents, setContents] = useState(null);
 
   useEffect(() => {
     changeHTMLDirection(currentLang);
   }, [currentLang]);
 
   useEffect(() => {
-    getAboutHTML(currentLang).then(data => {
-      setContents(data)
-    })
-  });
+    getAboutHTML(currentLang).then(/* data => {
+      // setContents(data)
+    } */);
+  }, [currentLang]);
 
   return (
     <>
-      {/*<div>
-        <h1>{t('nav.aboutUs')}</h1>
-        <p>
-          {contents && parseHTML(contents)}
-        </p>
-      </div> */}
-
+    <Container>
       <HeroSection />
       <InfoSection />
       <ValueSection />
@@ -50,6 +40,7 @@ const About = () => {
       <FaqSection />
       <SubscribeSection />
       <FooterSection />
+    </Container>
 
       <CookieConsent
         location="bottom"
@@ -62,7 +53,7 @@ const About = () => {
         {t('cookies.message')}
       </CookieConsent>
     </>
-  )
-}
+  );
+};
 
 export default About;

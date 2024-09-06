@@ -28,6 +28,7 @@
     }
   },
   "mainPanel": {
+    "returnToTable": "Return",
     "candidate": {
       "login": "Login",
       "eMail": "Email",
@@ -54,13 +55,18 @@
       "driver": "Transportation",
       "lunch": "Food",
       "living": "Accommodation",
-      "cv": "Your resume (.doc, .docx, .pdf) - optional",
+      "cv": "Your resume - optional",
+      "cvPlaceholder": ".doc, .docx, .pdf",
       "cvLink": "Download resume form",
       "controls": {
         "checkboxY": "Yes",
         "checkboxN": "Doesn't matter",
         "btnSave": "Save changes"
-      }
+      },
+      "aboutMe": "About me",
+      "lang": "Languages",
+      "close": "Close",
+      "delete": "Delete"
     },
     "company": {
       "login": "Login",
@@ -114,9 +120,17 @@
       "btnLogin": "Log in",
       "alert": "An email has been sent to you to confirm your login",
       "regLink": "No profile yet? Sign up!",
-      "loginLink": "Already registered? Sign in!"
+      "loginLink": "Already registered? Sign in!",
+      "loginPersonalAccountH1": "Log in to your Account",
+      "foggotenMe": "Have you forgotten me?"
     },
     "reg": {
+      "regH1": "Register",
+      "iamsearchJob": "I'm looking for a job",
+      "iamemployee": "I am an employer",
+      "login": "Login",
+      "password": "Password",
+      "btnReg": "Register",
       "btnSubmit": "Okay, I am ready to continue!",
       "finalMessage": "Your request has been sent and password is on your email!",
       "candidate": {
@@ -133,6 +147,7 @@
         },
         "vacancy": "Vacancy that you want",
         "city": "Which city it should be located"
+        
       },
       "company": {
         "name": "What is your company name?",
@@ -140,6 +155,7 @@
         "positions": "Which position(s) are opened?",
         "workersQuantity": "How many people do you need?",
         "eMail": "Tell your contact email",
+        "phone": "Tell your Israeli phone number",
         "workingHours": {
           "start": "Start working hours",
           "finish": "Finish working hours"
@@ -183,8 +199,182 @@
         "less": "Show less ↑",
         "more": "Show more ↓",
         "btnSend": "Apply to this job",
-        "btnSendClicked": "Cool, we will response you back soon!"
+        "btnSendClicked": "Cool, we will response you back soon!",
+        "btnReply": "To respond to a vacancy",
+        "hour": "hour",
+        "jobTitle": "Cardboard Factory",
+        "jobDescription": "Workers are needed at the cardboard factory (quality control, packaging, packaging). An 8-hour working day in 2 shifts. We draw up all the necessary documents, the vacancy is official. We provide accommodation, good conditions (no more than 2 people in a room). The city of Haifa. Only for Israeli citizens."
       }
     }
-  }
+  },
+  "about": {
+    "lookingEmployee": "I'm looking for an employee",
+    "lookingJob": "I'm looking for a job",
+    "aboutCompanyH1": "About Company",
+    "aboutCompany": "The Aviel Group of Companies is a large company in the region engaged in the organization and control of employee recruitment.\nQualified specialists of the company monitor every request at all stages - from resume to job placement.\nOur company's services include not only job search, but also assistance with documents, provision of temporary housing and advice on job legalization. We strive to facilitate the process of employment and adaptation of our clients by providing a full range of services.\nWe understand that the adaptation process can be difficult and confusing. Our team of experts is ready to help you every step of the way, providing professional support and solving all your questions.",
+    "weOfferH1": "We Offer",
+    "weOffer": {
+      "one": "Job search",
+      "oneText": "Analyzing the labor market and selecting vacancies that match your skills and work experience.",
+      "two": "Help with documents",
+      "twoTextOne": "Registration of the necessary documents for work and residence.",
+      "twoTextTwo": "Preparation and support of the process of obtaining a visa and work permit.",
+      "twoTextThree": "Consultations on the legal aspects of employment and job legalization.",
+      "three": "Provision of temporary housing",
+      "threeText": "Search and rent temporary housing for the period of adaptation.",
+      "four": "Training",
+      "fourText": "Training in the company maintains a high level of qualification of employees and improves the quality of work.",
+      "five": "Comfortable conditions",
+      "fiveText": "Official employment and work under an employment contract. Social guarantees and a white salary.",
+      "six": "Schedule and hours",
+      "sixText": "Flexible work schedule makes it possible to manage your time more efficiently and is suitable for students.",
+      "seven": "Health",
+      "sevenText": "Additional wellness programs in medical institutions with an increased level of comfort."
+    },
+    "howitWorksH1": "How it works",
+    "howitWorks": {
+      "one": "Response",
+      "oneText": "Fill out the feedback form on the website.",
+      "two": "Interview",
+      "twoText": "Have a short interview with the manager.",
+      "three": "Test task",
+      "threeText": "It may be necessary to complete the test task proposed by the company.",
+      "four": "Work",
+      "fourText": "Get to work after completing the test task successfully."
+    },
+    "questionsH1": "Frequently Asked Questions",
+    "questions": {
+      "one": "I have responded to the vacancy, what are the next steps?",
+      "oneText": "Have a short interview with the manager. It may be necessary to complete the test task proposed by the company.",
+      "two": "Are you considering resumes from citizens of other countries?",
+      "twoText": "Have a short interview with the manager. It may be necessary to complete the test task proposed by the company.",
+      "three": "Is there any help for nonresidents when moving?",
+      "threeText": "Yes, we have a relocation program in place."
+    }
+    
+    
+  },
+  "subscribe": {
+    "subscribe": "Subscribe to one of our channels and keep up to date with vacancies and news"
+  },
+  "footer": {
+    "address": "Israel, Hadera, Herbert Samuel, 17"
+  },
+
+  "cities": {
+    "0": "Choose a city",
+    "1": "Tel-Aviv",
+    "2": "Haifa",
+    "3": "Jerusalem",
+    "4": "Yokneam-Illit",
+    "5": "Akko",
+    "6": "Afula"
+  },
+  "professions": {
+    "01": "Cashier",
+    "02": "Security Guard",
+    "03": "Grocery Store Worker",
+    "04": "Dairy Fridge Sorter",
+    "05": "Volt Sorter",
+    "06": "Shift Manager",
+    "07": "Truck Driver 12-15 Tons",
+    "08": "Warehouse Worker",
+    "09": "Forklift Operator",
+    "10": "Cleaning Supplies Sorter",
+    "11": "Online Order Picker",
+    "12": "Butcher Department Employee",
+    "13": "Deputy Director"
+  },
+  "personalAccount": {
+    "title": "Personal Account",
+    "optional": "Optional",
+    "tellUs": "Tell us a little about yourself:"
+  },
+
+  "companyAccount": {
+  "name": "Enter your name",
+  "nameCompany": "Enter the company name",
+  "typeBusiness": {
+    "01": "Construction",
+    "02": "Retail",
+    "03": "Restaurant business",
+    "04": "Transportation",
+    "05": "Hospitality business"
+  },
+  "phone": "Enter contact phone",
+  "addAnons": "Add announcement",
+  "delAnons": "Delete",
+  "yourAdds": {
+    "01": "Looking for a warehouse worker",
+    "02": "Industrial climbers needed",
+    "03": "C1 category drivers",
+    "04": "Cashiers for Tiv-Tam"
+  },
+  "age": {
+    "1": "up to 65 years",
+    "2": "up to 55 years",
+    "3": "Doesn't matter"
+  },
+  "experience": {
+    "1": "At least 5 years",
+    "2": "At least one year",
+    "3": "Doesn't matter"
+  },
+  "language": {
+    "1": "Hebrew + Russian",
+    "2": "Hebrew + English",
+    "3": "Doesn't matter"
+  },
+  "trigger": "Не нашли подходящую ваканcию?",
+  "triggerMes": "Оставьте ваши данные и наши специалисты свяжутся с вами!"
+},
+"trigger": "Have you not found a suitable vacancy?",
+"triggerMes": "Leave your details and our specialists will contact you!",
+
+"filterAdmin": {
+    "search": "Enter an additional parameter",
+    "cities": "Cities (comma separated)",
+    "haifa": "Haifa, Acre, Nahariya",
+    "vacancy": "Vacancy",
+    "documents": "Documents",
+    "btnSearch": "Search"
+},
+
+"navbarAdminPanel": {
+    "ads": "Adverts",
+    "candidates": "Candidates",
+    "companies": "Companies",
+    "vacancies": "Vacancies",
+    "logout": "Logout"
+  },
+
+  
+"formSearchBlue": {
+      "title": "Didn't find the right job?",
+      "text": "Leave your contact details and specify the area of your interest, and our manager will contact you!",
+      "name": "Your Name",
+      "living": "Where do you live?",
+      "work": "Where did you work last year?",
+      "eMail": "Your email",
+      "atachFile": "Resume (attach file)",
+      "birthDate": "Your date of birth",
+      "whatVacancy": "What job are you looking for?",
+      "documents": "What documents do you have?",
+      "phone": "Your phone",
+      "btnSend": "Submit application",
+      "info": "You will receive an email with confirmation and a temporary password to access your personal account.",
+      "titleCompany": "Didn't find the right employee?"
+    },
+    "video": "Having trouble navigating the department?",
+    "guide": "Watch the video guide!"
+  
+  
+
+
+  
 }
+
+
+
+  
+

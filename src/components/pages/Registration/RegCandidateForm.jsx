@@ -1,13 +1,15 @@
 import { useState } from 'react';
-import { Buffer } from 'buffer';
+//import { Buffer } from 'buffer';
 import { regNewUser, sendCVToEmail, sendEmail, sendToBitrix, uploadCV } from '../../../utils/fetcher';
 import passwordGenerator from '../../../utils/passwordGenerator';
 import getUserStatusForRecruiter from '../../../utils/getUserStatusForRecruiter';
 import { useTranslation } from "react-i18next";
 import UserTypesEnum from '../../../enums/UserTypes.enum';
 
-const VITE_ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
-let fileReader, cvContents;
+
+//const VITE_ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
+//let fileReader, cvContents;
+let cvContents;
 
 const RegCandidateForm = () => {
 
@@ -35,13 +37,13 @@ const RegCandidateForm = () => {
         city: '',
     });
 
-    const [cv, setCV] = useState(null);
+    //const [cv, setCV] = useState(null);
 
     const onChangeHandler = (name, value) => {
         setFormData({ ...formData, [name]: value });
     }
 
-    const cvSelectedHandler = (file) => {
+    /*const cvSelectedHandler = (file) => {
         // TODO: fix buffer for nodemail
         setCV(file);
         
@@ -53,7 +55,7 @@ const RegCandidateForm = () => {
     const cvParsedHandler = () => {
         const fileContents = Buffer.from(fileReader.result, 'base64');
         cvContents = fileContents;
-    }
+    }*/
 
     const submitHandler = async (e, finalMsg) => {
         e.preventDefault();
@@ -88,15 +90,16 @@ const RegCandidateForm = () => {
             eMail: formData.eMail
         });
 
-        await uploadCV(cv, formData.phone);
+        //await uploadCV(cv, formData.phone);
+        await uploadCV(formData.phone);
 
         if (cvContents) {
             await sendCVToEmail({
                 userName: formData.name,
-                fileType: cv.type,
+                //fileType: cv.type,
                 fileContents: cvContents,
-                fileName: cv.name,
-                emailTo: VITE_ADMIN_EMAIL
+                //fileName: cv.name,
+                //emailTo: VITE_ADMIN_EMAIL
             })
         }
         
@@ -104,74 +107,34 @@ const RegCandidateForm = () => {
     }
 
     return (
-        <form onSubmit={e => submitHandler(e, t('mainPanel.reg.finalMessage'))}>
-            <div className="col-md-12">
-                <label htmlFor="name">{t('mainPanel.reg.candidate.name')}</label>
-                <input type="text"
-                    onKeyDown={(e) => onChangeHandler('name', e.target.value)}
-                    onChange={(e) => onChangeHandler('name', e.target.value)}
-                    id="name" required />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="age">{t('mainPanel.reg.candidate.age')}</label>
-                <input type="number"
-                    onMouseLeave={(e) => onChangeHandler('age', e.target.value)}
-                    onKeyDown={(e) => onChangeHandler('age', e.target.value)}
-                    onChange={(e) => onChangeHandler('age', e.target.value)}
-                    id="age" defaultValue={16} min={16} max={89} required />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="email">{t('mainPanel.reg.candidate.eMail')}</label>
-                <input type="email"
-                    onKeyDown={(e) => onChangeHandler('eMail', e.target.value)}
-                    onChange={(e) => onChangeHandler('eMail', e.target.value)}
-                    id="email" required />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="phone">{t('mainPanel.reg.candidate.phone')}</label>
-                <input type="text"
-                    onKeyDown={(e) => onChangeHandler('phone', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('phone', e.target.value)}
-                    onChange={(e) => onChangeHandler('phone', e.target.value)}
-                    id="phone" />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="status">{t('mainPanel.reg.candidate.status.label')}</label>
-                <select
-                    onMouseLeave={(e) => onChangeHandler('status', e.target.value)}
-                    onChange={(e) => onChangeHandler('status', e.target.value)}
-                    id="status">
-                    <option value="teudat-zeut">{t('mainPanel.reg.candidate.status.t1')}</option>
-                    <option value="work-visa">{t('mainPanel.reg.candidate.status.t2')}</option>
-                    <option value="tour-visa">{t('mainPanel.reg.candidate.status.t3')}</option>
-                    <option value="blue-paper">{t('mainPanel.reg.candidate.status.t4')}</option>
-                </select>
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="vacancy">{t('mainPanel.reg.candidate.vacancy')}</label>
-                <input type="text"
-                    onKeyDown={(e) => onChangeHandler('vacancy', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('vacancy', e.target.value)}
-                    onChange={(e) => onChangeHandler('vacancy', e.target.value)}
-                    id="vacancy" required />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="city">{t('mainPanel.reg.candidate.city')}</label>
-                <input type="text"
-                    onKeyDown={(e) => onChangeHandler('city', e.target.value)}
-                    onMouseLeave={(e) => onChangeHandler('city', e.target.value)}
-                    onChange={(e) => onChangeHandler('city', e.target.value)}
-                    id="city" />
-            </div>
-            <div className="col-md-12">
-                <label htmlFor="cv">{t('mainPanel.candidate.cv')}</label>
-                <input type="file" accept='application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf' name='cv' onChange={(e) => cvSelectedHandler(e.target.files[0])} id="cv" />
-                
-            </div>
-            <div className="col-md-12">
-                <button type="submit">{t('mainPanel.reg.btnSubmit')}</button>
-            </div>
-        </form>
+        <div className="form-decoration">
+    <form onSubmit={e => submitHandler(e, t('mainPanel.reg.finalMessage'))}>
+        <input className="border rounded-pill form-control text-center fw-semibold mb-3 py-2 border-0" type="text" id="name" placeholder={t('mainPanel.reg.candidate.name')} required=""
+        onKeyDown={(e) => onChangeHandler('name', e.target.value)}
+        onChange={(e) => onChangeHandler('name', e.target.value)}
+        />
+        <input className="form-control text-center fw-semibold mb-3 py-2 border-0" type="tel" id="phone" placeholder={t('mainPanel.reg.candidate.phone')} inputMode="tel" required="" pattern="05\d{1}[-\s]*\d{3}[-\s]*\d{4}"
+        onKeyDown={(e) => onChangeHandler('phone', e.target.value)}
+        onMouseLeave={(e) => onChangeHandler('phone', e.target.value)}
+        onChange={(e) => onChangeHandler('phone', e.target.value)}
+        />
+        <input className="border rounded-pill form-control text-center fw-semibold mb-3 py-2 border-0" type="text" placeholder={t('mainPanel.reg.login')} inputMode="latin" required="" />
+        <input className="border rounded-pill form-control text-center fw-semibold mb-3 py-2 border-0" type="email" id="email" name="email" placeholder={t('mainPanel.reg.candidate.eMail')} inputMode="email" required=""
+        onKeyDown={(e) => onChangeHandler('eMail', e.target.value)}
+        onChange={(e) => onChangeHandler('eMail', e.target.value)}
+        /> 
+        <div className="position-relative">
+            <input className="border rounded-pill form-control text-center fw-semibold mb-3 py-2 border-0" type="password" id="passwordInput" placeholder={t('mainPanel.reg.password')} required="" autoComplete="on" inputMode="latin" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-eye position-absolute" id="togglePassword" style={{top: '50%', right: '20px', transform: 'translateY(-50%)', width: '30px', height: '20px'}}>
+                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+            </svg>
+        </div>
+        <div className="d-flex justify-content-center">
+            <button className="btn btn-primary mt-3" type="submit">{t('mainPanel.reg.btnReg')}</button>
+        </div>
+    </form>
+</div>
     )
 }
 

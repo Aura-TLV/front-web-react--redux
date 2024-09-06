@@ -10,8 +10,8 @@ hr {
   color: #dcdcdc;
 }
 
-h1 {
-  color: #3B77B4;
+h1, h2, h3, h4, h5 {
+  color: #2D79C4;
 }
 
 @media (min-width: 992px) and (max-width:1399.98px) {
@@ -51,12 +51,271 @@ h1 {
 }
 
 a {
-  color: #40A1CB;
+  color: #2D79C4;
   text-decoration: none;
 }
 
 .a-dark {
   color: #1e1e1e;
   text-decoration: none;
+}
+
+.bg-grey {
+  background: #f9f9f9;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  font-size: 16px;
+  --bs-btn-bg: #2D79C4;
+  --bs-btn-border-color: #2D79C4;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #2481DD;
+  --bs-btn-hover-border-color: #2481DD;
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #2D79C4;
+  --bs-btn-active-border-color: #2D79C4;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #2D79C4;
+  --bs-btn-disabled-border-color: #2D79C4;
+  border-radius: 30px;
+}
+
+.form-check-input:checked {
+  background-color: #2D79C4;
+  border-color: #2D79C4;
+}
+
+a {
+  color: #3B77B4;
+}
+
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #1FA50A;
+  --bs-btn-border-color: #1FA50A;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #39C623;
+  --bs-btn-hover-border-color: #39C623;
+  --bs-btn-focus-shadow-rgb: 130,138,145;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #1FA50A;
+  --bs-btn-active-border-color: #1FA50A;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #6c757d;
+  --bs-btn-disabled-border-color: #6c757d;
+}
+
+.shadow-inner {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #3B77B4;
+}
+
+.toggle-link svg {
+  transition: transform 0.3s;
+}
+
+.toggle-link.collapsed svg {
+  transform: rotate(0deg);
+}
+
+.toggle-link:not(.collapsed) svg {
+  transform: rotate(180deg);
+}
+
+.bg-video {
+  border: 1px solid #86b7fe;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+@media (max-width: 575px) {
+  .bg-video {
+    border: 0px solid #86b7fe;
+    background: transparent;
+    border-radius: 0px;
+  }
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: white;
+  font-size: 18px;
+  background-color: #2D79C4;
+  border-color: #2D79C4;
+  border-radius: 30px;
+}
+
+.form-decoration {
+  background: #FAF9F9;
+  border-radius: 30px;
+  padding: 24px;
+  /*text-align: center;*/
+}
+
+.form-control::placeholder {
+  color: #9C9A9A;
+  opacity: 1;
+}
+
+.div-register {
+  min-width: 524px;
+  /*margin-top: 96px;*/
+}
+
+@media (max-width: 576px) {
+  .div-register {
+    min-width: 320px;
+    /*margin-top: 96px;*/
+  }
+}
+
+.tab-content {
+  min-height: 524px;
+}
+
+.footer-fixed-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer-fixed-page .content {
+  flex-grow: 1;
+}
+
+.footer-fixed-page .footer {
+  margin-top: auto;
+}
+
+.div-register .nav-tabs .nav-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2D79C4;
+  background-color: #f0f0f0;
+  border-radius: 30px;
+  border-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.div-register .nav-tabs .nav-link.active {
+  color: white;
+  background-color: #2D79C4;
+  border-color: #2D79C4;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.div-register .nav-tabs {
+  border-bottom: none;
+}
+
+.window-help {
+  /*background-color: #D7EAFD;*/
+  background-image: url("../../assets/img/bck_answers.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.form-control {
+  border: none;
+}
+
+.badge {
+  /*background: #2D79C4;*/
+  min-width: 48px;
+  height: 48px;
+  /*border-radius: 50%;*/
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bg-primary {
+  background-color: #2D79C4 !important;
+  background: #2D79C4 !important;
+}
+
+.bg-light {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+}
+
+.text-primary {
+  color: #2d79c4 !important;
+}
+
+.btn-grey {
+  background: #9c9a9a;
+  color: white;
+}
+
+.toggle-hidden {
+  display: none;
+}
+
+
+
+/* Скрываем радио-кнопки */
+.btn-check {
+  display: none;
+}
+
+/* Стили для табов в виде pill */
+.btn-outline-primary {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2D79C4 !important; /* Применяем !important */
+  background-color: #f0f0f0 !important;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary.active {
+  background-color: #2D79C4 !important; /* Применяем !important */
+  color: white !important;
+  font-weight: 600;
+  border-color: #2D79C4 !important; /* Применяем !important */
+}
+
+
+
+/* styles for AdminPanel */
+
+.btn-grey {
+  background-color: #9C9A9A;
+  border: none;
+}
+
+.btn-grey:hover {
+  background-color: #8D8A8A;
+}
+
+
+
+.pagination button {
+  margin-right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  text-decoration: underline;
 }
 

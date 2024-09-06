@@ -1,69 +1,68 @@
-import { NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import i18n from '../../i18n';
-import './Navbar.css';
-import changeHTMLDirection from "../../utils/changeHTMLDirection";
+//import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import './../../assets/styles/main.css';
+import './Navbar-Right-Links-icons.css';
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
 
-    const { t } = useTranslation();
+  const getCurrentLanguage = () => i18n.language;
+  const changeLanguage = (lang) => i18n.changeLanguage(lang);
 
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
-        changeHTMLDirection(lng);
-    }
-
-    const getCurrentLanguage = () => {
-        return i18n.language.split('-')[0];
-    }
-
-
-    return (
-        <nav id="menu" className="navbar navbar-expand-lg bg-white">
-    <div className="container-fluid">
-        <ul className="custom-navbar navbar-nav ms-auto mb-2 mb-lg-0">
+  return (
+    <nav id="menu" className="navbar navbar-expand-lg bg-white">
+      <div className="container-fluid">
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="custom-navbar navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
             <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="/jobs">
-                    {t('nav.jobs')}
-                </NavLink>
+              <NavLink className="nav-link" aria-current="page" to="/jobs">
+                {t('nav.jobs')}
+              </NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/about-us">
-                    {t('nav.aboutUs')}
-                </NavLink>
+              <NavLink className="nav-link" to="/about-us">
+                {t('nav.aboutUs')}
+              </NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/how-to">
-                    {t('nav.howTo')}
-                </NavLink>
+              <NavLink className="nav-link" to="/about-us#target-section">
+                {t('nav.howTo')}
+              </NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/contacts">
-                    {t('nav.contacts')}
-                </NavLink>
+              <NavLink className="nav-link" to="/contacts">
+                {t('nav.contacts')}
+              </NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/login">
-                    {t('nav.login')}
-                </NavLink>
+              <NavLink className="nav-link" to="/account">
+                {t('nav.login')}
+              </NavLink>
             </li>
             <li className="nav-item dropdown">
-                <select className="form-select"
-                    defaultValue={getCurrentLanguage()}
-                    onChange={(e) => changeLanguage(e.target.value)}
-                >
-                    <option value="he">HE</option>
-                    <option value="ar">AR</option>
-                    <option value="en">EN</option>
-                    <option value="uk">UA</option>
-                    <option value="ru">RU</option>
-                </select>
+              <select
+                className="form-select"
+                defaultValue={getCurrentLanguage()}
+                onChange={(e) => changeLanguage(e.target.value)}
+              >
+                <option value="he">HE</option>
+                <option value="ar">AR</option>
+                <option value="en">EN</option>
+                <option value="uk">UA</option>
+                <option value="ru">RU</option>
+              </select>
             </li>
-        </ul>
-    </div>
-</nav>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-    )
-}
+export default Navbar;
 
-export default Navbar
+
