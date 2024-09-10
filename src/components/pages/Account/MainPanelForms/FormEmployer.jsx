@@ -1,3 +1,5 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleCity } from '../../../../redux/slices/candidateSlice'; // Импорт экшена Redux
 import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import './FormCandidate.css';
@@ -6,24 +8,19 @@ import '../../../../assets/js/input-tel-clear.js';
 import '../../../../assets/js/input-clear.js';
 
 const FormEmployer = () => {
-  const [isVisible, setIsVisible] = useState(false);  // Состояние для управления видимостью блока
+  const dispatch = useDispatch();
+  const { selectedCity } = useSelector(state => state.candidate);  // Получаем значения из Redux
+  const [isVisible, setIsVisible] = useState(false);  // Состояние для управления видимостью скрытого блока
 
   const toggleVisibility = () => {
-    setIsVisible(!isVisible);  // Переключение видимости блока
+    setIsVisible(!isVisible);  // Переключение видимости скрытого блока
   };
-
-  const [selectedCity, setSelectedCity] = useState([]);
-
-  const toggleCity = (city) => {
-    if (selectedCity.includes(city)) {
-      setSelectedCity(selectedCity.filter(item => item !== city));
-    } else {
-      setSelectedCity([...selectedCity, city]);
-    }
-  };
-  
 
   const { t } = useTranslation();
+
+  const handleToggleCity = (city) => {
+    dispatch(toggleCity(city));  // Обновляем выбранные города через Redux
+  };
 
   const submitHandler = (e, msg) => {
     e.preventDefault();
@@ -65,25 +62,21 @@ const FormEmployer = () => {
               <div className="col-lg-12 col-xl-4 mb-4">
                 <label htmlFor="companyType" className="form-label fw-bold">{t('mainPanel.company.companyType')}</label>
                 <select className="form-select border-0 text-muted" id="companyType" defaultValue="12">
-                      
-                          <option value="12">{t('companyAccount.typeBusiness.01')}</option>
-                          <option value="13">{t('companyAccount.typeBusiness.02')}</option>
-                          <option value="14">{t('companyAccount.typeBusiness.03')}</option>
-                          <option value="14">{t('companyAccount.typeBusiness.04')}</option>
-                          <option value="14">{t('companyAccount.typeBusiness.05')}</option>
-                      
+                  <option value="12">{t('companyAccount.typeBusiness.01')}</option>
+                  <option value="13">{t('companyAccount.typeBusiness.02')}</option>
+                  <option value="14">{t('companyAccount.typeBusiness.03')}</option>
+                  <option value="14">{t('companyAccount.typeBusiness.04')}</option>
+                  <option value="14">{t('companyAccount.typeBusiness.05')}</option>
                 </select>
               </div>
               <div className="col-12">
-                  <div className="row">
-                      <div className="col-lg-6 col-xl-4 mb-4">
-                        <label htmlFor="phone" className="form-label fw-bold">{t('mainPanel.company.phone')}:</label>
-                        <input className="form-control" id="phone" type="tel" pattern="05\d{1}[-\s]*\d{3}[-\s]*\d{4}" required="" inputMode="tel" placeholder={t('companyAccount.phone')} />
-                      </div>
+                <div className="row">
+                  <div className="col-lg-6 col-xl-4 mb-4">
+                    <label htmlFor="phone" className="form-label fw-bold">{t('mainPanel.company.phone')}:</label>
+                    <input className="form-control" id="phone" type="tel" pattern="05\d{1}[-\s]*\d{3}[-\s]*\d{4}" required="" inputMode="tel" placeholder={t('companyAccount.phone')} />
                   </div>
+                </div>
               </div>
-
-
 
               {/* Скрытый блок, видимость которого управляется состоянием */}
               {isVisible && (
@@ -121,13 +114,6 @@ const FormEmployer = () => {
                         <option value="12">{t('professions.04')}</option>
                         <option value="13">{t('professions.05')}</option>
                         <option value="14">{t('professions.06')}</option>
-                        <option value="12">{t('professions.07')}</option>
-                        <option value="13">{t('professions.08')}</option>
-                        <option value="14">{t('professions.09')}</option>
-                        <option value="12">{t('professions.10')}</option>
-                        <option value="13">{t('professions.11')}</option>
-                        <option value="14">{t('professions.12')}</option>
-                        <option value="14">{t('professions.13')}</option>
                       </select>
                     </div>
                     <div className="col-lg-4 mb-4">
@@ -141,6 +127,7 @@ const FormEmployer = () => {
                         <option value="6">{t('cities.6')}</option>
                       </select>
                     </div>
+
                     <div className="col-lg-4 mb-4">
                       <label className="form-label fw-semibold">{t('mainPanel.company.age')}:</label>
                       <select className="form-select border-0 text-muted" defaultValue="12">
@@ -204,32 +191,35 @@ const FormEmployer = () => {
                       <input className="form-control" type="text" placeholder={t('mainPanel.company.enterCityName')} inputMode="tel" required="" />
                     </div>
 
-                    <div className="col-12">
-                    <div className="d-flex">
-    {[t('cities.2'), t('cities.4'), t('cities.5'), t('cities.6')].map(city => (
-      <span 
-        key={city} 
-        className={`btn text-nowrap rounded-pill m-2 ${selectedCity.includes(city) ? 'btn-primary text-white' : 'btn-grey'}`}
-        onClick={() => toggleCity(city)}
-        style={{ cursor: 'pointer' }}
-      >
-        {city}
-        {selectedCity.includes(city) && (
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-x-lg ms-2">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
-          </svg>
-        )}
-      </span>
-    ))}
-  </div>
-  
-  {/* Скрытые чекбоксы для передачи данных формы */}
-  {selectedCity.map(city => (
-    <input key={city} type="checkbox" name="city" value={city} checked readOnly hidden />
-  ))}
-</div>
 
-                    
+
+                    <div className="col-12">
+                      <label className="form-label fw-semibold">{t('mainPanel.company.city')}:</label>
+                      <div className="d-flex">
+                        {[t('cities.2'), t('cities.4'), t('cities.5'), t('cities.6')].map(city => (
+                          <span
+                            key={city}
+                            className={`btn text-nowrap rounded-pill m-2 ${selectedCity.includes(city) ? 'btn-primary text-white' : 'btn-grey'}`}
+                            onClick={() => handleToggleCity(city)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            {city}
+                            {selectedCity.includes(city) && (
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-x-lg ms-2">
+                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
+                              </svg>
+                            )}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+
+
+
+
+
+
                     <div className="col-12 mb-4 mt-5">
                       <label className="form-label fw-semibold">{t('personalAccount.tellUs')}</label>
                       <textarea className="form-control" rows="4" placeholder={t('personalAccount.optional')}></textarea>
@@ -242,10 +232,10 @@ const FormEmployer = () => {
               <div className="col-12 mb-4 mt-2">
                 <div className="text-nowrap">
                   <a id="toggleLink" href="#" onClick={toggleVisibility}><strong>{t('companyAccount.addAnons')} </strong>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" className="fs-2 text-primary" id="toggleIcon" onClick={toggleVisibility}>
-                    <path d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path>
-                  </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" className="fs-2 text-primary" id="toggleIcon">
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path>
+                    </svg>
                   </a>
                 </div>
               </div>

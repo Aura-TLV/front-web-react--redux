@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 import logo from './assets/logo.png';
 import Logo from './components/common/Logo';
 import Navbar from './components/common/Navbar';
@@ -21,9 +24,11 @@ import './i18n';
 
 const App = () => {
     return (
-        <Router>
-            <MainComponent />
-        </Router>
+        <Provider store={store}>
+      <Router>
+        <MainComponent />
+      </Router>
+    </Provider>
     )
 }
 
